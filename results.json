@@ -529,6 +529,73 @@
         "served_models": [
           "deepseek-flash"
         ]
+      },
+      {
+        "run_id": "baseline-baseline-3-0-dee1d1d7",
+        "backend": "baseline",
+        "role": "baseline",
+        "seed": 3,
+        "episode": 0,
+        "score": 0.0,
+        "steps": 30,
+        "frames": 120,
+        "lives_lost": 0,
+        "terminated": false,
+        "truncated": true,
+        "truncation_reason": "max_steps",
+        "model_calls": 30,
+        "input_tokens": 22020,
+        "output_tokens": 450,
+        "latency_ms_p50": 827.601708471775,
+        "latency_ms_p95": 1063.9162749866955,
+        "latency_ms_total": 25519.270996563137,
+        "errors_by_status": {},
+        "retries": 0,
+        "fallback_actions": 0,
+        "mean_confidence": 0.6866666666666664,
+        "ordinary_accuracy": 0.0,
+        "deadline_adjusted_accuracy": 0.0,
+        "timeout_count": 0,
+        "invalid_output_count": 0,
+        "beyond_sweep_count": 30,
+        "cost_usd": 0.006440400000000001,
+        "pricing_basis": {
+          "date": "2026-09-29",
+          "unit": "USD per million tokens",
+          "input": 0.27,
+          "output": 1.1,
+          "source": "deepseek published pricing (deepseek-chat)"
+        },
+        "brier_score": 0.48066666666666674,
+        "calibration_bins": [
+          {
+            "lower": 0.6000000000000001,
+            "count": 12,
+            "confidence": 0.5999999999999999,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.7000000000000001,
+            "count": 14,
+            "confidence": 0.7,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.9,
+            "count": 4,
+            "confidence": 0.9,
+            "accuracy": 0.0
+          }
+        ],
+        "ece": 0.6866666666666666,
+        "mixed_safety_snapshots": 0,
+        "mixed_correctness_snapshots": 30,
+        "safe_action_labels": 180,
+        "unsafe_action_labels": 0,
+        "trace": "artifacts/baseline-baseline-3-0-dee1d1d7.jsonl",
+        "served_models": [
+          "deepseek-flash"
+        ]
       }
     ]
   }
