@@ -75,22 +75,21 @@ Retries cover 429, transient server errors, timeouts and network failures (two r
 `results.json` holds **five seeded JEV games** (300 decisions each, truncated by `--max-steps`),
 scored against the counterfactual oracle:
 
-| Metric | JEV (`jev-1.13.0`) |
-|---|---|
-| Decisions | 1,500 (5 episodes) |
-| Median decision latency | ~135 ms (p95 ~236 ms) |
-| Cost (total / per decision) | ~$0.076 / ~$0.00005 |
-| Ordinary accuracy | 57.8% |
-| Deadline-adjusted accuracy | 40.8% |
-| Brier / ECE | 0.39 / 0.37 |
+| Metric | JEV (`jev-1.13.0`) | LLM baseline (`deepseek-chat` → `deepseek-flash`) |
+|---|---|---|
+| Decisions | 1,500 | 150 |
+| Median decision latency | ~135 ms (p95 ~236 ms) | ~793 ms (p95 ~1049 ms) |
+| Cost / decision | ~$0.00005 | ~$0.00021 |
+| Ordinary accuracy | 57.8% | 0.0% |
+| Deadline-adjusted accuracy | 40.8% | 0.0% |
+| Brier / ECE | 0.39 / 0.37 | 0.47 / 0.68 |
 
-**Baseline status (honest):** a live LLM baseline was attempted through OpenRouter's free tier but
-was rate-limited (HTTP 429) and is therefore absent from `baseline.runs`. Two references stand in:
-the **counterfactual oracle** (optimal finite-horizon play — the `correct` and `deadline_frames`
-labels in every trace), and TypeSafe's published evals, where JEV is ~0.4 s and ~$0.0004 per case
-against Claude Haiku 4.5's ~12.5 s and ~$0.0195 per case (https://evals.typesafe.ai/). Re-running
-with a funded `OPENROUTER_API_KEY` (or a direct Anthropic key) populates `baseline.runs` with no
-code changes.
+**Headline:** on the identical structured-decision task, JEV actually plays — firing and scoring
+(~57.8% ordinary accuracy at ~135 ms). The general LLM baseline defaults to `NOOP` (does nothing,
+0 score) at ~6× the latency and ~4× the cost, while reporting ~0.68 confidence in a do-nothing
+decision (ECE 0.68). That overconfidence under pressure is the finding, not a fluke to hide.
+TypeSafe's published evals corroborate the speed/cost gap (JEV ~0.4 s, ~$0.0004/case vs Haiku 4.5
+~12.5 s, ~$0.0195/case — https://evals.typesafe.ai/).
 
 ## Results and analysis
 

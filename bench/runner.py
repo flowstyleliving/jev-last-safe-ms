@@ -145,7 +145,8 @@ def run(args):
             target = data['runs'] if role=='decider' else data['baseline']['runs']
             target.append(result)
             requested = {'mock':'mock-random-v1','jev':'jev-latest','baseline':os.environ.get('BASELINE_MODEL','anthropic/claude-haiku-4.5')}[args.model]
-            metadata = dict(role=role,provider={'mock':'mock','jev':'typesafe','baseline':'openrouter'}[args.model],
+            provider = {'mock':'mock','jev':'typesafe','baseline':os.environ.get('BASELINE_PROVIDER','openrouter')}[args.model]
+            metadata = dict(role=role,provider=provider,
                 requested_model=requested,served_model=result['served_models'][-1] if result['served_models'] else None,
                 sdk_package='httpx' if args.model!='mock' else 'bench',sdk_version=httpx.__version__ if args.model!='mock' else '0.1.0')
             if metadata not in data['models']: data['models'].append(metadata)

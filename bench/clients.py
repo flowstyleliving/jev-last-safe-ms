@@ -42,9 +42,13 @@ class Client:
         self.requested = {'mock': 'mock-random-v1', 'jev': 'jev-latest',
                           'baseline': os.environ.get('BASELINE_MODEL', 'anthropic/claude-haiku-4.5')}[model]
         if model != 'mock':
-            self.key = os.environ.get('TYPESAFE_API_KEY' if model == 'jev' else 'OPENROUTER_API_KEY')
-            if not self.key:
-                raise ValueError('Missing TYPESAFE_API_KEY' if model == 'jev' else 'Missing OPENROUTER_API_KEY')
+            if model == 'jev':
+                self.key = os.environ.get('TYPESAFE_API_KEY')
+                if not self.key: raise ValueError('Missing TYPESAFE_API_KEY')
+            else:
+                self.key = os.environ.get('BASELINE_API_KEY') or os.environ.get('OPENROUTER_API_KEY')
+                if not self.key: raise ValueError('Missing BASELINE_API_KEY or OPENROUTER_API_KEY')
+            self.base_url = os.environ.get('BASELINE_BASE_URL', 'https://openrouter.ai/api/v1/chat/completions')
 
     def close(self):
         self.http.close()
@@ -73,7 +77,7 @@ class Client:
                         prompt = (self.question + '\nState:\n' + state_json + '\n\n'
                                   'Reply with a JSON object only, no prose: '
                                   '{"action": "<one of ' + ', '.join(ACTIONS) + '>", "confidence": <number 0 to 1>}.')
-                        response = self.http.post('https://openrouter.ai/api/v1/chat/completions',
+                        response = self.http.post(self.base_url,
                             headers={'Authorization': f'Bearer {self.key}'},
                             json=dict(model=self.requested,
                                       messages=[dict(role='user', content=prompt)],
