@@ -1,0 +1,3179 @@
+{
+  "schema_version": 2,
+  "source_results": "/Users/msrk/Dev/jev-last-safe-ms/results.json",
+  "validation": "schema, full trace counts, natural mixed labels, serialized ALE replay",
+  "summary": {
+    "decider": {
+      "episodes": 5,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mixed_safety_snapshots": 499,
+      "finite_deadline_snapshots": 190,
+      "safe_action_labels": 12688,
+      "unsafe_action_labels": 4124
+    },
+    "baseline": {
+      "episodes": 5,
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mixed_safety_snapshots": 499,
+      "finite_deadline_snapshots": 190,
+      "safe_action_labels": 12688,
+      "unsafe_action_labels": 4124
+    }
+  },
+  "examples": [
+    {
+      "role": "decider",
+      "seed": 1,
+      "step": 75,
+      "frame": 296,
+      "state": {
+        "ram": [
+          0,
+          7,
+          0,
+          210,
+          145,
+          162,
+          226,
+          183,
+          68,
+          30,
+          124,
+          255,
+          255,
+          50,
+          255,
+          255,
+          0,
+          36,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          82,
+          0,
+          29,
+          43,
+          39,
+          117,
+          180,
+          0,
+          36,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          110,
+          0,
+          23,
+          0,
+          28,
+          14,
+          30,
+          94,
+          126,
+          255,
+          255,
+          255,
+          195,
+          44,
+          102,
+          126,
+          126,
+          126,
+          255,
+          255,
+          255,
+          195,
+          60,
+          126,
+          126,
+          126,
+          126,
+          127,
+          127,
+          255,
+          195,
+          3,
+          0,
+          112,
+          3,
+          153,
+          0,
+          3,
+          0,
+          79,
+          0,
+          16,
+          64,
+          246,
+          64,
+          79,
+          7,
+          246,
+          40,
+          63,
+          80,
+          229,
+          24,
+          0,
+          52,
+          82,
+          196,
+          246,
+          20,
+          7,
+          0,
+          226,
+          0,
+          0,
+          0,
+          0,
+          0,
+          229,
+          63,
+          0,
+          0,
+          191,
+          255,
+          255,
+          0,
+          189,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          252,
+          0,
+          0,
+          167,
+          253,
+          192,
+          242
+        ],
+        "ship": {
+          "x": 38,
+          "y": 185
+        },
+        "alien_grid": [
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "alien_origin": {
+          "x": 28,
+          "y": 31
+        },
+        "alien_spacing": [
+          16,
+          18
+        ],
+        "bullets": [
+          {
+            "slot": 0,
+            "owner": "enemy",
+            "x": 62,
+            "y": 131,
+            "active": true,
+            "vx": 0.0,
+            "vy": 1.0
+          },
+          {
+            "slot": 1,
+            "owner": "enemy",
+            "x": 77,
+            "y": 495,
+            "active": false,
+            "vx": null,
+            "vy": null
+          },
+          {
+            "slot": 2,
+            "owner": "player",
+            "x": 38,
+            "y": 17,
+            "active": false,
+            "vx": null,
+            "vy": null
+          }
+        ],
+        "shields": [
+          {
+            "x": 42,
+            "y": 157,
+            "bitmap": [
+              28,
+              14,
+              30,
+              94,
+              126,
+              255,
+              255,
+              255,
+              195
+            ]
+          },
+          {
+            "x": 74,
+            "y": 157,
+            "bitmap": [
+              44,
+              102,
+              126,
+              126,
+              126,
+              255,
+              255,
+              255,
+              195
+            ]
+          },
+          {
+            "x": 106,
+            "y": 157,
+            "bitmap": [
+              60,
+              126,
+              126,
+              126,
+              126,
+              127,
+              127,
+              255,
+              195
+            ]
+          }
+        ],
+        "lives": 3,
+        "ram_lives": 3,
+        "score": 0.0,
+        "score_bcd_bytes": [
+          0,
+          0
+        ],
+        "velocity_units": "pixels/frame; null on spawn/discontinuity"
+      },
+      "emulator_state_b64": "9zwGAPc8BgAoAQAAKAEAAAAAAAAAAAAALzgAACAAAAA3MmZmYmVmNjUwNGI3NWU2OWVlMTA0NWFmOTA3NWY2NgYAAABTeXN0ZW3ITQAAJBoAADMzMDkxOTIyNzIgMTA3MzcyNjEzIDIzMTQ2NzIwMCAzOTk3Mjc1MjA4IDMzOTM3NTg0OTYgNDE0MzgzMzY4OSAyMDI2MDEwNjM3IDI1NjYyNDk2OCAyMDIzMDkyNzI1IDE1OTkwODA5MTQgMzA5NzE1MjQ2MiAxMzIwNTg4MzAwIDEyNjg2NzAxMzAgMjk3MDQ5NTAyNSAxOTI4MTcwNzQgOTcxMTA3Mjc4IDQwMTk1MDQyNyAxNzkxMjAxMjUgMzAzMDUyNzA4MCA0MjM4NzUzODk4IDMwMzU1MzYxMzQgMzQyNzYzMCAyNTE5ODYzNzQ1IDM0NDkyNDkxNjMgMjA5NTYzNDYxIDM5MDQwMzAzMSAxNjkwMjk3MjAyIDc0Nzc4NDE5MSAxNzgxOTgwOTg4IDQ2NjEzOTMxNSA0MDU4ODg0Njc0IDMwNjQ0NjA2MTcgMTI2ODExNjAyOCA4MDgxMjg0MzkgMjkyNTk5NDcxNCAzMzk2MzAwNDggMTA4NjI5NTA0OSAxMTAyNzQzNTA2IDIwODExOTQ0NzQgMTQwNzM4Njk3OSAzMzc2Nzg5MzUgMzI3ODk2MDY1IDMyNDkwNDcwNjAgNDEyNTExMjAwMyAyMTE0MDgzNDQxIDI5OTI4NzMxODYgMjMwNjA1MTg1OSA2NjQ3MDE4MDEgMjUxNzA1Mzk4NiAzOTE4MTI4OTgyIDUyODk5MDc4NCAxNzMyNTAyNTIwIDE1MTk5MjM5NTggMzM5MDI2MjA2MSAyMTk5NTM3NjMzIDIyMzIxNDU5OTUgMjMyMjIyODg3NCAzMTMwMDgwMzU4IDcyNzM0MTEwNyAxNjMxMzkzNzU5IDE1NzYxNTU0NzkgMjMyNTMyNTIzMiAyMjg0MzY0Mjg1IDIwMjQ5NTYyNTUgMTcxMjE3NTMyMyAyNzA2MTUxNjI0IDEwOTIwODE4NSAzNTk4MzI0NTMgNjcyNDM0NDk4IDE3MTczMzY1MzIgMjc2OTU4OTMyIDQxMTExNTg4OTYgMTY3MDgwNzM0MCAxMjUyNjcyMTQzIDEyODYzNTcyMDUgMjc1OTAwMjIyOCAxOTQ4NDgyOTExIDM4NTMxMDg0NTYgNDI0MTA2MTAwMiAyMjU4MDYyMzA1IDM5MDA4NjE1NDAgNDA2NDg2MzM1MyAxMzQ4MzAwNTM3IDE1Nzc1NTAwMDAgMTMwMzA4NDk3NCAzMTgzOTM3NTA5IDIzNjA0Mzc3NCAxNzA0OTExODkwIDE2MTUwMTM3MjQgOTc0ODAyMzE5IDE5MjU5MTQ5NTQgMjM0ODk1OTM1MSAzMTg0MzU1ODUwIDM2OTE3MTk3OCAxMzcyMjA2MjkzIDE1NTc2NzkyNDAgMTE3NTA5NDI1OCAxNjUwOTg5NzY1IDQxMDYzMTg5MDcgMzg0MjgyMjkxMiAxMTQxOTU1NjA4IDE4OTc4NzEzMDMgMTY4NzQxODg4OSAxMDYyNDMwOTIgMjA4Nzg0MjAwMSAxNzUzNDM2OTI2IDE1NDY4NjAxNzAgMzkyOTEzOTM5OSA2ODE0MjU0NzcgMjczMTMwNTc3MSAzNjU5NDEzNzkyIDIzOTAwNTA0OTkgMTM4MjYyNjMzMCAyNzAzMjk1MTMzIDE2NTcxNTE2NjYgMTc1NDI0NzgzMSAxMzY1MDk3NTExIDE4OTA5NDc1NzYgMjg5NTEwODQwOCAyMDIzMTQ1MTgyIDIzNDQwNjg2MDAgMTc2MzUyNjMwNCA0MjU3MjIwNDg0IDE1OTA3MDI3NSAyMDg5Njg0NTkyIDk4NzU3MzM5OSAyMTg1MjU4OTAyIDUzNDk3NTA4MCAyMDUxNTMzODM3IDEwNzQxNzEzMzAgMzkwNTQ0MDI0NiAxNzQ5ODMwNTc3IDEyODIwODQyMTcgMTg1NzY1MzA5MCAyMTM3OTI3NzA2IDQwNzYxMDUzOTUgNDAzNDY0OTIxMyAxNDk4Mzc3NDEyIDM1Mzg4MzU0MDAgMzQ4MjQwNDY0NyAzMzExMzU5NTU3IDMzNTAzNjQzMzYgMTQ5NjQyMTA0MiAxMDU2Mjg3OTIzIDIzNjk2NDYyNjAgNzU3NjM0Mjc2IDM0MDQ1MTQwNTkgMjAzMDA1ODMwNCAzODg1MjQ3MTY2IDI0MDc0NjU2NDMgNDA5NjIyOTA2NCAyNDQ5MjU0OTYzIDU4ODkzMDkzMCAyODYyMTk3NTI4IDgyMDQ3MjkyOSAxMTY2OTgyMTMgMjYwMjIzOTQgMjg3MTA1NzMyIDQyMTI4OTA3OSAzNTA1MjAzOTkxIDQxNDY4MzY0ODkgMTk5MDU4MjAwIDQyNjE5MzM0NzEgMzgzNjkyMzgyOCAzNDUxMjQ5NTAwIDM0MDY0MDA2NzcgMzk1NTMxNDMzIDMyNTU2ODczODUgMzczMjQ4NjQ0NyAzMzE1NjA0MzYyIDg2NjUyOTA4NCAzOTMzOTc4NTg4IDI2MTc1MzY0NCAxOTc4OTg3OTE4IDI4ODUxMTgzNjYgNDA4MzQ5MjgwMCAyMjA2NTM0NjkyIDE5NDY2OTAxMDAgMTgyODExNzc5MiAyOTU4ODg5NTcgOTYwMDU0ODU4IDE1ODEwMTI1ODggMzUwNzA1NjQ0NCA2MDM2MjY1MTkgMTIwODU0MjU0NCAyNjc1MDM2OTc5IDExNDUzNDMxMjQgMTM4MTY0MzUyOSAyNTM2NTE5MDE3IDIxMDI2MTg4MSAxNDkxNjgyNTYwIDk1NjA4OTI1NyAxNzEyMTY5OTcwIDI0MTE5NjkzMTcgMTU4NDQ3Mjc0IDEyNjI3NTA4MTAgMzYwNjIyMTg3MiA4MTIxNzIzOTMgMzU3ODgzNDg3MiAxNTA4MjUyMzUgMjEzNTU3NDUyIDE1MzEwOTI0MjYgMjYyMTg5MTk0MiAyNDI2ODEyODQgMTA2MzcyNTk4OSAxMjcwNDMxNzkgOTMzOTczMTMwIDQwNjUzOTgyMTQgMTk5MjAyMzMxMCAzMjM1MTM1Mjk3IDEwMTMyNzA2MjUgMzk5ODc3NTQ1MyAxNDM5MDQ5MTM1IDEzNjA1OTIxMjggMzA0MTQxODE3NiAyNTY2MTk0OTE4IDM2NTA2MDAyNzMgMzUzMDMzMTMyMCAzNjE0ODA3NDIgMjcxOTIxNTcxMCAyMDExMzMgNDkzMjYwNzA3IDc2ODIwNjc3MCAyMzQwNzI3OTY2IDI0ODI3Mzg5MjkgMjg2MzYzNTAxMyAyMDkzNTM4OTIyIDQwODAyNzI1NDMgMzEyNDg0MjIyOSAzNDE4ODM5MDA1IDU4Mjg0Mjg4MSAzNzA4OTg4NjI1IDIyOTE3MDAyOTUgMjc5MTAyMzUyNyAzMjU4ODM0NTY4IDIwMTgzOTAzNDMgODA3NTI4NDYzIDM0NzI0NjM0NTMgNDI2OTk3NDE1MyA0MjMyODM4MTE4IDMwMDM4Mzg0MTQgNDczNDgzNTA2IDQ3OTEyMDExMyAzODg0NDUyNzQ5IDE2MDYyNTgzMDMgMTE0OTAxOTk1MiA0MTc3NDA4MjA4IDI2NTM4OTI1MzkgNTM5MjU0OTggNDA3MjY2MzQ1NiAyNzA0NTY2NzM0IDI1OTgzNjU5NDggMjIxNTM1NTgzMSA5NDMyNzU3NTUgMjkxMzkwMDM0NiAzMDc1OTA4MjUyIDM0MzEzODA5NTUgNDAzMzk0NjA0NiAyNjYwNDA4NTYgMjQyMjQ5OTg0IDQxMjQ0MTU2MjUgMjY5NDQ2MzQ4NCAzNTA3MjM2NTQ1IDUwNTU2MjY0NiAxODM5Mjk2MDU5IDU0MTI5Njc1MiAzNjUyNzY1MTE5IDIxNDUwOTk5NjQgNDY3MDQ2NjkwIDUyNDMxODIwNCAxNTY4MDQxNDcxIDEyODE1NDAyOTggMzg1MzQ5NzUxNiAxNzkxODE2MDk3IDM5NTE2ODcwOTUgMTc3NTcxNTc0MCA0Mjc0NTc5MzAgMTA5NTI2Mjk4OCAyOTUxNDgyMDQ0IDc1NjE0OTM5NCAxODczNDQzMTI3IDE2Mzc0NjQ1NTYgMzYxNzY2NTMxMiAxOTEwMDU0NzY3IDE2MTg4MjI2NjMgMjM4MzQwMzAwOCAxMTg5NTYzNTAxIDE3NDY1OTY5MjggMjU2OTAyMTUxNCA0MjI5OTc1MTggNDI1NzI3ODc2NSA4MjU5MTE1MDIgMTk0MjE5ODUxMSA0MDE4NDUxODU2IDIxMzk5MDE4NjYgMzEzMTc2NTUzOSAzMDEwODI3OTU0IDQzMzYyODQ0NiAxMzE5NjQ2MzQxIDczOTQ2NjY5MiAxOTc4NDcwOSAxNTgxNTU2OTA3IDYzNTA0MDQ1MyAxMzYzODgzNjI5IDE2MDY0MzY0MzMgMTQ4NzcwMzg3OCA4NjczMzgxNzAgNTA1OTQ0MDkwIDQyMTgyNTI3OTUgMTY3NDQ1MjExNCAyMDQwNTkxMDM0IDI3NzY4MTU3NDcgMjg1MjM1MzQ0MiAyNzYzMDAwMjg2IDExMzY1NjY2NjcgMTYzNDYzNzYxOCAxMTczNDE4OTc2IDU2NTg3OTQzMSAyNTA0ODc2MDM4IDI2ODQ2ODQxMjAgNDI2Nzc3NDUzNSAyMTI5NTY2MzYyIDE2NjI4NDE4MzggNDExMDUxNTM5IDEyOTk0NjA2ODAgMzkyMTY2ODUwMyAzMjE3MjUxNjMxIDMxNzM3Njc1NjUgMTYyMTMxOTIyNCA3NjIyOTQwOTEgNTUyMzU3MjIyIDI1NTc0ODUzMjYgNDkwNzY0MTczIDM0MTAyNzI2MjcgMjUyNTUzNzAyNyAxNjgwNTI5OTc3IDE4ODIyMzk4MSAzODk1NTg1MTExIDU4NDc3ODc0NyA0MTE3MTYxNjk1IDUzMDA3MDEzIDE5ODU1MDU3NzkgNDI4MTQ4NzQ0NSAzNzIzNTc1NzggMjg2MTY1NjIwNyAxOTQ5MDg3MzU5IDM5MDQ4NjAwNTMgMjYwNjI1NTYzMCAzMTg2NTcxNDIxIDI1MDAyOTI1MDkgMzg5MjU4NTExOCA0MDAwNDkzMjY5IDIxOTIxNDcwMjcgNDI5MjEzNDEwNyAxMzExODUxMjk1IDMwMjI4MTc5ODIgMTE2NzQyNjc3IDE1ODY4MDkxMzkgMjI5NDA5NzA2MSAyNjgxMDY3MjE1IDI0MTIwMTcxMDIgNjA2MTE5Nzg2IDEwNjk0MDYwOSAyOTQ0NDMzOTQxIDc5NDE5NTIwNCAzNTcwODgwNjQ2IDIxOTIzNzI1ODggNzQ2ODQyNzE0IDIyOTcxNDM2NzEgMzgzNDcyODk5MSAxNzQ1NzkyMyA0MDQ2MTA1ODk1IDM5MDAzNDc2OTMgMzQ2Mzc0MDE5MiAzOTU2MjMyNjUwIDY4MDgxNDgxIDk3NDEyNzgxOCAzMzEwNjk1ODU2IDE4ODMyNDE2MzAgMjIxMDk3MjYwMyAzNTczNjkzMTgyIDI0ODkxNjcwNTkgMjQxODU0Mjk2OCAxMjA4NTA3MjYgNDE2ODU0NTI4MyAxNTM1MjY0MjYyIDI5NTM4NjM2MjYgMTE5NTU0ODE0NCAzMjQ0NjQxMDU0IDM0MjE3NzYyNTEgMzgyMTkwMTQxMSAyMTg0NTU4MDYwIDIxMzE2OTk0NDMgMTcwMTgzMTA0OCAzNjgzOTk1MTY0IDMyMTM4NDczNzEgMjUxNTUzNTAyIDIyNzMxNDIxODQgMjYwNTExNzgxIDI5NzM0NTU3ODkgMzY0MTQ3MjgwMCAxNDAzMTA4ODM3IDQwMDQxODAyMzUgMjYxMTM3MjYwOCA0MjExNjExNjgzIDIyODEzNTA4NDIgNDE2MzEyNTQyNyAxMzcxMjU2NzE2IDg5MTYwOTUzNCAxNDM1MDc0NzYgMzk2Mzg0NjE0NyAzMzM5NjMwNjI0IDkxMTEwNjgwMCAxNDE2NTkyMDgyIDE0ODQ0ODExMjIgMTY5NTE0MTQyNyAzNjE2ODczOTUxIDIwNzc0NTk5NTQgOTg2MTc5MDc4IDQyNDY3OTY0MjIgMTc4OTE0ODA2NiAxNTQ2MzA2NjgxIDEwNjE5MjgzMjMgNDA5MTY2NjkwNyAxNzI2MTMzMzQ5IDE0NjE5MDc1NCAxNzU0Mzg0NjY1IDM4NTUyMzMxOTIgMTQzNDMwMjYzMiAxNTI3NDY3NDg3IDMyNDEzODAwNDEgMzI3MjU0NTI1NCA3NjkzNTM4NzAgMTE4MTEwNjIzNiA0MjM0MzQ2MzEyIDc1MDQ0Mzk4MyAxODYwMTA1OTYgMjQ0MzUwNzUwMiAyNzc4NzczOTkgMzYzOTI4OTU1MSAyMzUwNzQyNzEzIDE1NTE4NDYxNDkgMTUxNzkyODE0NyAyODMzNTU4ODEwIDM3MzMwNzEwMzMgMzg5Mzc1ODM3MiAzMjU5MjI4NTQgMTkxMDY1ODg4MiAzMDUwNTg4ODUyIDczMzQwNTcxNiAzMTY1NjQ0ODQzIDk2OTExNjUzMyAyNjE2ODk0NTc4IDE3OTQyOTg0OTAgMzM4NTcxMjU5NCAzNjQzMjUwNTcgNTI1OTUwODM0IDM4NjY0MDU5NjAgMzA1ODI0NTM1MCAzNDU4NDczNjQgMTg3Nzc5MDUwMSAzMTc1MzUwMTUwIDMxNTcwOTU3ODMgMTY2OTY4NTI5MyAzNTc4NDI5MzYxIDI1OTM2OTUxMjAgMzQ1MzEyMjI4OSA3NzY4OTI4ODIgNDEwMzc1Mjc1NSAxNzYwOTM2MjY2IDM2NjQ5OTYzMzggMTk3NTQ1MDk5MyAzNjI0NTk1MzQxIDIzMzg2ODU3OTYgNDA2MjczNjI4NSAzODA4NTMyOTE4IDQyMDgzNjI0NDIgNjk4ODQ3NjYzIDM5NTcwNzI3NTAgMzUwMjkyMDAzNyAzODc4NDAxNDQzIDI2NTM3NDM0MiAzNDkxNjM1MDEzIDI2NDI5ODg4MDYgMzA2ODA1NjMxNyAzMTg0MzEwMjc3IDE4MTkzNjg0OTQgMzQyODI4ODUwMyA1MDI2NzU4ODkgMzYwNDcwODkzMSAyOTM0NTA5OTk5IDE5MjIxNTU4NDQgMTM3ODg1MjU1MSAyMTU1MDEzNDM3IDE4MTg4NzEyODAgMjQyMzYyMDM1NSAyMzYwMzI5NjcyIDEzNDg5NjM3MzAgMTAyOTAyMzc4IDU5MDY1OTMyMiAyMTQ4NzU0NzIxIDI0MTc1NDczOSA4OTgwMTE4NjAgMzg3NjQ0MTQ3OCA3MjE1NDExMDEgMzg3Mzk2NzAxNCA1MzU4Njg4ODggMTY5NTYwNTIxMCAxNjE3NTMxNzUwIDM4NTU5MTgzOSAyNDExNzc4NjA5IDM2NTU0OTgyOTUgMjg2MzY4MzkyNiAxMTcwNTc4ODgxIDExMTk4MjYwODggMjYwMDY0NTY0NSAyMzU3MTg5NDIgMjA1MDE3MTU2NyAzNDMxMDg2NjIxIDI4MTU4MjI4NzkgMjA1NzY0Nzg3NSAzNjUzMzc5OTMgMjkwNDY0ODc3IDEzMDA0ODM0NjkgMTA2MDQ1NzA3MSAxMzcwODQ5NzU2IDM2MTM5MjQzIDc0MjIxODU4MSAyNjI0ODgzOTE4IDEzMzE5NDQ3NyAyNzUwMjIzMTY5IDI2NDE3MTQxNzYgNDIyMTg0MjI2MCAyNDk1ODcwNjExIDk4NTE1MDUyNiAyNjk5NzI3MjU3IDc4MjQwNjMyNCAzOTk4NzU1MTg0IDE1NjQzMzYxMTQgMTI2ODQzOTY0NiAzMTU5MzYyMTAyIDQxNTA2OTg5OTcgMTg4MjkyODU1NyAzOTg5OTI5MTk0IDg1NTE1MDI0MyA3MzczNzc5NDIgNDIwMjI2ODA5MCAxNjg0MTAxNjMgMTgyNzQwNzM3NCAyNjY2NzA5MjA3IDE2NTAwMzY1NjIgMjA2ODQ3MzQwNiAxOTY2NDg4NDQgOTk0MDI2MTE1IDE4NDgyNzY4OTQgMTExMzc0MCAyNzk2MTE4MDgzIDkwODc5MTQ4OSAzNjQzNTE2ODQ2IDM2NzA1MDgwMjEgOTAwNjg4ODk1IDQ1MjY0MDMxOCAyNzk0NDM0NjkxIDE4NDkzNzA1MyAzMTE3MjE0ODkzIDI1Njc5MzU3MTUgNDE3NTc5MDE5OCAyNjA1MDkzODAxIDI2OTQzMzg0NjMgMzE2MTI2MDg2NSA0NjQzMDY4ODYgNTUwOTczMzY0IDM4MTE4NzM2NDcgMzg5MDAwNjI5MCAzMDA3ODIyOTQ3IDM5MTk2NDYxODAgMjMyNzg4NTQyOSAyNjU4OTM5NzcgMzE0NDczMzY2MCAyMjY4MjYwMzcg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NTU1MjM2MzIgMzI3MzcyNjM5IDI3NjMwMDIyOTUgMzU3Mzk1NjYyIDMzNjkyNjIwNDAgMjUwMTkzNDE3NSAxMjk3MjIzMjU1IDE5OTYwMTY3NzggMjA0MDQ5MjE3NyAzOTM0NDI2ODA2IDgyNDc0NDY2OSAxMDE4ODQ5MDM4IDEyMzExNzYwNzcgMTMyMzU5MDc3MCAyNTAxNjE4NjMzIDIyNDc1MjQxNzQgMzMxNjY4OTAzOCA5NTI5MTI2MjQgMzM0Njg3NzMzMyAzNzU2MDUzODExIDMwMjI1ODc0NDAgMjMzMTI1ODkxMiAyMTkyOTIxOTAwIDE3MjMxMjE0OTMgNDg1Njk0NjYyIDExNzk2NTIwNTkgMzg2OTIxNjI4MyAyNTMwMjYzNTcgMjMxMTA4NDQ5MSAyNDQ4MDgyNzkzIDMwODUzMjE2ODQgMTAzMjYxODk0NiAzMDkwOTMxNDg1IDM1MDIyMjc0MTggMzM3OTY0NDUzNyA4MTUxNzI4IDIxMDQxMDEzOTcgMzUxMTI5MTI3MyAxMzk0ODAxMzYxIDEyNzQzOTc3OTIgMjk3MjY0MDY0MyAzODA0OTg5MDgwIDQxOTI3ODEzMjIgMTIyNzc1OTY3OCA3MDg0MjMxMDcgMTc4NjYzNjMwOCAyODgyMjUxODE5IDI1MTYwODE4NDAgMjQ1NTc3MTI4MSAzODUzNTI3ODM4IDM5OTc5NTI0NjEgMzY4Njc5NjIxMSAzMTkyNzcyMzA5IDQxMzIxNzM5NTUgMjgzOTkzNDk5IDIyMDgzNDA4OTYgNDAyNTk4OTYwMiA3NjAyNDA0MyAyMDMyOTUyMjkxIDM0Njk4ODM1MDYgODE2ODY0MTcyIDM3OTA3ODkzNTUgMTUzNTA3NzQxNCAxNzI2OTM0NTA1IDM2NDQ2MDI0NSAxOTk2NDcwOTIyIDgyMzU4MzE3OCAzMjYxMDM4MzcwIDM1MzU4MzQ5MzUgOTc4MTQ1MTYxIDI0ODU0NzU4NjIgMTEwODEwOTYxOSAyMjQ5NjkyNTEgMTA3NDU5ODQ2MSA5MTQ5MDYzMDggNDE3NDM2NTgwNiAxNTQ0NDA0OTQ1IDE2OTE0NzI4OTggMTAyNTk5ODEyOSAzNDg3MTAwNTA4IDc2NzY1NDQ2NCAxMjczNDI0NDQ0IDU4NTQ3MDM5MyAyNTg0OTY3MDA4IDQyMzczMDQxOTkgMzM2Mjc4MzI3NiAxNTk3MjI1MzA0IDQ1NjUzNzgxOSA5Nzc2NTYyMTkgMTk5ODk5NjQxMSAyNTI5MDI0ODI3IDI0MjQ3OTU3MzQgNDA5NTc1NzMyMiAyMTQyOTEwMTM0IDMyMDM0NTg4MzcgMTQyODAyMTI2IDM3NTA2MzMwMTQgMjAwNTc1MDU5OSAyNDYxMzA3OTk5IDk0MjE3NDM2NiAzNzcyMzg1NzM3IDM0MDc5Mjk0NDMgMjQwNTA4MDQyIDE5NTc3NDQ4MzQgMTYyMTA5OTc1MSAyOTc0NzI4NTE3IDM4NDE0NjIwOTggMTkwNTA5MjMxOCAzNjA4ODkwOTMwIDM1NzAxNDI3OTYgMTU5OTM4MTQ5NyAyMjkzOTc1Njc2IDI0MDc1NTY5NTAgMzI0MzkzODQzNSA3MTgwMTYxOTcgMTI2MjA1OTc4OSA1MTUwMzAwMzcgMTExMTgxMjk5NSAyMzEyMDI5ODI0IDE5MzYzMDM1MSA3OTg3NDY1MTUgMzk3Nzg1MDc2MiAyMTA4NDQzMzQwIDM4ODYyNTc1NyAyODk1Mzg1MjA0IDIxNTY5MTU2MzIgMzk0MDIwNDU4OSAzNTQyNzU3NTcwIDMxNDg3ODA0MTAgMzA5NzQyNjg1NSAyNjk2MjU2MTIwIDI3NTQyMDg3MDUgMTU1NTkxODg2OCAzNTYwMTEwNDAwIDM4MTM2MzM5MTMgMzQ0NTgwNjUyMSAxMjAyNzgwODMyIDMyNDg4NDQ3NTUgMjI2Mjg5Mzk0MSAxNzM1NjA3MzQwIDMzMTk1ODU4OTMgMTc1ODkyODM1NSA3NTczMTc1NjAgMzY1NDE3MDU0NiAyMzM4OTM0NTk4IDI1Njg2OTQzMDMgMzQyMzMwMzQ2MCAyMDgyMzU0NTY3IDQwMDc5MDIzMCAyNTkwODA4NDM1IDMwNTg4NjAwNzEgMzk1NTE1MDQ3IDU5NDgwNDExMyAxOTY2MDk2Mzg4IDE5Njc1NTM0NjggMTI4NDIzNTY5MiAzNDQzNzczMTUxIDExMTYzNTk4MDkgMzcyMTYxMzI3MSAyOTc3NTkyMjQzIDM2ODY3NDg0NyAyNjMyODA5MTAzIDY5NjAyMzYzMyAyMzAzNDQ4Mjk3IDM5ODYwMjUzMDggMTU1Nzk3NjcgMzkzNTMyODE4OCA4MTM4MzQ4OTMgMTUzMjY0OTIxNCAyODg3NzU1NDg2IDE5NTU3OTk4MTMgMjg4NDE5ODA5MCAxNTQxMzk2NjkgMTc3NjQ3MTc5MiAzNzcyMDg1MzA3IDI2Mjg3NzE3NjkgMTIyMTIzMzc0MSAzMTA5MDc3MTgwIDI2MDM0MzA5NzggMjY1NTEwMTQ4NSA0MDA1NjE0NTAzIDM0MTk0NDQ5OTQgODEyNTU4OTcwIDEzNjY1NjMwOTEgMzYwNTcxMjk1MyA1OTQ1ODA2MDAgNDEzMjQ1Nzg4IDMzMDE0NTAyNDkgNzc4MDQyNSAxMzExNzYxNjUzIDI4NTA4NDUwNjcgMjMzMjY4OTUzOSAxMjI5Nzg4MzE2IDI1MDc1MzQzNDMgMTcyMDc2NDc4NSAxMzE0NTY2MTcwIDk2ODUyMzYwMCA0MjA3NTkzMDQ1IDM1OTAzMzE4NjggMTEwNDU5OTc4OSA4MDg0MzQ3NCAxNDc5MjA4NTcgMzc1NjI2OTY0OCAyMTA3MTYyNTg2IDQyNTY2MDEzMDYgMjIxMjg4NTg4OSA4NjgwNjc2MDggMjMyNzc2MzE0IDQxNDgxNTM5NTAgMTQzODY5MTU1MiA1MDYyNjAxOTcgOTQzNTM3NTYxIDMxODY0OTc2MjMgMzg3NDEzMTEzOSAzMjY4MDE3ODM0IDIzMDQ4NzcxMjQgNDIwNTEzNTIzIDE5NzY5NTk4MDIgNDQzNjYzNDUwIDMwNjY0MDM1NDggMjM0MDc5NTAzMiAyMTAyNjc4OTUyIDM4MjgyODE1MDYgMjY2OTU3NjIyIDI4MTEyNTQ3MTMgNjY0MDcyNDE5IDE0Mzk2Mjg2MTIgMjkzNTc3OTc1NyAyNzM5MDI3ODg5IDQ3NzI3NzYwMiAxNzE2NjM0NDM1IDM0MjE1NDYyNTggMjI3ODEwNzc2NiAyMjE2MjIwODU1IDMwMTA0MDk5NzMgMzg5NDUwMjczIDc4MTc5NTQzMyAyMDAyNzg1ODY4IDc2MTk0ODU3NyAzMTg1MDU1ODU4IDQ4NDE2NTYxOCAxNzgxNjMzMTQyIDMzMjQ1NDk1MTkgMTQ2MDQ4OTIwMCAyOTkzNzU1ODAzIDMzMjM5MzQ2MjUgMjY1MzMyNjE2NCAxNDM3NjIyODY3IDMwNzc2ODM4NTEgNDE0Nzg0NzUyOCAzNDcxODM3MDY4IDMzOTc0MDQyNTAgMzUxMDgwOTUxMCAzMDM4NjA1OTc2IDk0Njg4NzQyOCAzNzQxMTkzOTY2IDI1NTE4MjQ1MDEgMTIwMDk4OTk1MSA2MTc0MjY5NTQgMTk1NzI5ODM4IDMxNTY2MTk2MTIgMzc3NDQ3OTk4MyAzODk5Nzk5ODQ0IDQyMDc5NTI1OTkgMTQ1MDIxNzcyNCAxNjU3MjIzNTgxIDMxNjU5NDI1NjQgMTgzMTk0Mzk1OCA5MzgyNzExMjUgMzg4ODc0NDczMiAxMzcyNTkwMDg2IDI3OTY1NDQ5NTggMzE3MTc1NzYzOSA0MTQ1ODk0Mzg4IDMyNzQzNDk5NzAgMTU2MjI2NTEwOSAxNTQ3OTAxNDE1IDExNjg3NjY2MTcgMzI5ODE0Mzk1OCA4NjEyMTg5MjUgNjc4NTYwMDM1IDEyMDQ5MDA5NjMgMzM3MDkzNTE0OSAxMTg5MjA1ODM2IDEzODkzNDUzMjIgMzYyNTc4NjUwNiAyMzg1MTczMTc1IDM3NDY2MDcyNTMgNDAyMzgxMjc5NCAzNzUyMjU4OTI5IDM2MjU5OTQ5NjggMjQxMjEzNjMwNCAyOTA4MzIyMjAzIDQwMTI5MDkyIDE4NTI0NjI1MTUgMTM4OTA3NjY2MCAyNDc0MTIzMjAzIDY3OTU4ODUyMSAxMDg4ODM3NDUxIDIyMDIwNTQ0MTIgMzAwOTI3NzA1OCAzOTA3OTkyMDA1IDE3NTU3MzQ5NCAzNTgzNTMzOTcxIDMzOTQ0ODY0OTkgMjc3NDkzOTM5MSA5NzYxNzQxMDkgMjk4NzYzNzg2OSAyMzIyNTg4ODc3IDE5NzM4MzkyMDIgMzE1MDM2Mjk4MSAzMjkzNjgyNjM3IDExNzk3NDE4MDggMTE0MDk4NjcxMyAxMDAxMzY4Mjg2IDEwOTg3NTU5NjQgMzE3MjY3NzQ5MyA0MTk3MTUxOTAzIDE0MDAyODIzNDAgMzkzOTA0NzI2MCA5NTQ4Mzg1OTIgODEyMTY1MjQzIDI1MDcwODQ2MDIgMjgzNzE3MzQ3MSAzMTQ2NzE3NTExIDIxNjQ3NTI5MDggMTc2MTU5MTcxMCAxMzQyNDAxNzEyIDI2NDM0NzkyNzMgMzY4NDI4NjUwNyA0MDc1MTAyNDc3IDI5NzI0MjM1OSA0NjcyNTQzMjEgMTUzMDQ2ODI2OSAxNjI1NjI1NDkyIDI3MDI0Mjk4OCA5NzY1NzE5MTggMzY3MjAzODU4NiAyMTI4ODc5MDg0IDE1MzY0MDU0MiAxMDUxMDM3MzI5IDMzMzg3MjUxNzEgMTA0ODMxOTA5OSAxNTk0MzQ3NTg1IDE4MDU0MDg4NDggMjU3OTM3MzYwMSA4NjA4OTM2MjYgMTI0MTQ4NzAzIDk3MTk1NTA4OSAxNDMxMjA4MDUyIDMyNzQyMTI1NzkgMjc3ODAwMDM1MCAzMzkxMzUyNzMwIDkxNTkyMDk4NCA0MDc3MjA4OTYgMjY4NjQ2NDk5NCAzNjkwNTEzODQ1IDQyMjE3NjE0MzkgMzg4Mjk3OTc2NSA0MjU5NjQyNTQ1IDMzMDQyNTEyODkgNDQ5MjYyNjY1IDI3MTM5NTM4MzEgODQ1MTE5NjIyIDE1NDgzOTEyNjkgMjUzMTg2MDE0MCA3MTIxNjc2NDYgMjA0MzgzMDExIDI2NjU5ODIyOTcgMjcxOTg2MDQ2NyA3MTAxMTg3NDYgMTI4OTQ5MDgzNSAxNjM4OTI2MzQyIDMyNzUyODM3OSA0MTE5MDQ1MDk2IDkxNDU5ODQ1NSAxODYxMTA2ODEzIDI0MzU0OTY0NCA0NDQyMDQ3NzEgMjY0OTYwOTQzNCA4MTU2NjY1NzQgNDA5NTM2NTQ1NiAzMzAxODE2Mjg4IDI3NjQzNzg1NzYgMjY0MTkzNjI5MyA0MTgwNTE4MzE0IDkyMzU5NDQxMSAxNjgyNzg0OTA2IDEwMjY2NjM2OTYgMzc5NzE4MTY2OCAxMzk5ODMxNzA1IDM2NzI1MDcwOTYgMjgzMDU5ODE4MSAxNDA5OTM5NDY3IDE1Njc0NzA3NzYgMTU5NDE3ODQ1OCAyNDI4MzgwMTMxIDExNzY5NTA5MjAgMjEyNDQxNTQwNSAxNzE2NDk1OTgzIDM2MjYxNTU5NTIgNjY5OTE4MTMgMjg2OTM1ODQ0MCAxODg0MzE4OTA1IDYxMTY3NDUyOCAyOTE1MDczNTgxIDEyMTExMDk5MDggMzQ2MDc1Mjc5MiAyMTM4MDMxMjMzIDM0MzMxOTQyNzcgMTMzMzYxOTAxMSA3MTk5NjQ0NTEgMTI4NzYwNTA4NSAxMTM3NDg4ODY4IDIyMjg1MDQyNjIgMjM0MzY2NzE3OSAzMDIyNDMyMDkxIDUzMzE1MjgyOCAyODU2OTk2NDQ3IDEzNjI2MzIzOTkgMjE3MzUzNzkzOSAzNjI4ODE3NTU5IDEyNjc4OTI1NTMgNDIxNDAwMzY0NyAxNjQ4MTEzMzk1IDMzNzQ1MDg5NTUgNTU5OTkxMzEgMjY4NDQ0MjQ3NSAxODc2NTg0MTAxIDQxNjUxMjU5MjggMzMxNDgyNzQ4OSAxMzQzMTM5Mjc1IDMwMTc5NTk1ODQgMTk1MDgyOTExMCAyMTE0Mzk5MDA1IDM1NDE4MDAwNDQgNDE0NzUxODgzOCAzNTM1ODgzMzkxIDIzMzI0ODkzNTkgMTE2MTEzNTcxIDIzNDQ4ODYxOTQgMzE2Mzc1ODE4NCAxMjU5NTI3OTYyIDUwMDY0NzUgMzI1Nzc3MDAgOTg5NTI3MjE2IDk4OTk0NDI5MyA0Mjg2NjIyNzUyIDM1NzEzMDA2OTggMjYzNjI5Mzc4IDg2NjY2ODkzNyAzNTc0NjI4MTQ4IDI5MzE3MTg2NjAgNTAyNDQ4NzIxIDMzODc4NzY5NjcgNDI1MDk1NjgwMSAzMzAwMTQ5NjUgMzMxMzQ3NTc1MCAyODM1ODkzNTY1IDMwMzg2MDgyMDggMTM4MTQxNzExMCA0MDc5MTQ4MjI2IDg0MjcyNTU2NCAxMDkyNTY1MzEyIDM4ODI4MjA5NTMgODYyODI4NTI5IDI2NjA5OTg2NzAgMTg5MjcxMTkzOCAyOTExMTIzOTk3IDI4MDExMjA2NDYgMjQxNjY3ODg4NyA0MjQ2MzYxOTczIDI2MDQ1MjI2NTEgMTE4MTI0MzgzNyAyMjg4MDAyNzc3IDMwMTU3NzQ4ODcgMjQxMzE4Njc3OCAzOTcwMjQ0NDM0IDUxMTA1NjQxMCAyNTgwMjI1NjI5IDIyNzA0NjMzMzAgNDQ5NjU4NDQ0IDI4Njg3ODI3NCAyODU1NTQ5NTU1IDM4NTA2MTQzMDkgNDIxMjU3Mzc4OCAyNzQyOTkzODYwIDE2MTAxOTYxMiAzMjQ3MzEyNDEzIDM5ODE2MTQ0NjQgMjY4OTU5Nzg5NCAyNzI3NzQ5MjI3IDQ0NDgzOTI1OSAyMjM5NDQ0NzE4IDIzMDc0ODkyOTAgMjI1NDU2NDUxNSAyMjcyNTY2NDMxIDc3OTk5NDExMCAxMjgyNDcxMDUwIDEyMTMzOTIwODYgMjM1Mjg2Mzk2NCAzNDk3MTg3MzA2IDE0NzQ5NDQwNjcgMzUwNTAxMzcxNiAyNDYxNTM1MzQ4IDM5MzQ2MTAzNjIgMzUwMzQ3MjEyOSAzMDk0MzIzNTU1IDMwMDgzNjYyNjEgNTEwNjk4OTA3IDMzOTA1ODM2NjYgNjc3Mzc2NjMgMzYwNTQ0MTczNCAyMTQ1NTYyMTI0IDM1Njg1NDYwMjkgMjMwNzM2ODA0IDI3MDg3MjA4MjAgMzQ4NDQwNTY3MyAyNzQ5NzgyMjUxIDMzODIxMDc4NzIgNDA4NjAyMjIwOCAzNjg2MTQyMjEwIDE4NjQyOTgyMDIgMjYyMzQ0MTYzNCAxNTMzNDk0MjcyIDY3NzE2MTI5NSA1NjQwMTg4MTkgMTY1ODAwNDEzMCAxODEwMTYxMjE4IDIwMjEzNjE5MiAyNjY4MzYzMzcyIDkyMTEyMTkxOCAzNzcxMDcxNjE5IDI1NzQ4MjQyNTEgMzE5Njg5NjAzOCAxNTE3NzE3MzMwIDI4NTcyNTE1NDcgMzk1MzE2NjU5MiAyOTI5OTE5ODE3IDY2MTcwODEwOCAzNjcxMzQyMDU3IDM1MDA5MTg1NyAyOTQzMjU5NzUzIDE0NDU1NDcxMzkgMzYyNjA2OTQ3MSAxODY1NzAzNjUwIDE5MjQ5MTA1MDMgMTc3NDgzNzAyNCA5MjcxNTc2NDYgMTA4MDc0OTUwMCAxNzg3NTM2MDAwIDI2NzY3MjM0NzAgMTE0NDU2NDQ1MCAxMTYyMDcwOTEzIDI1NTY2OTM5NjcgMzAyMjAxNzI4MiAyMTAyOTY0ODU0IDE3MjUwODgxNzcgMzU1NzgwNjE3NCA1Mjc0ODE5NjIgMTk2OTQ3NTUwMyAyMTAzOTAyOTg4IDE4NzAzMzA1ODEgMjA2MjU0MDA3MyAyMjc5MzI0MDY1IDM2NTg4NzM1OTEgMTgyMTU5MzczNyA4MjI1NTA4MzcgMjc0NjMxODA5MSAxMDk1ODMwMzI0IDQwNTUxMDcxNzEgMjUwNjM5NjY3NSAyNzMxNTkwNzgwIDIwMDE2NzI2MDIgNTgzMzgwNTA5IDE5MzU3MjM4NjEgMTQ1Njk1NTM5NSAxMTc3OTQ2OTIyIDE0NjQ4NjQwNSAyMDQ2MDMyNzY1IDE0NTEwNzA3MTQgNDk3NjcyMTk0IDI1NzcxMDgzMDYgMjE5NzkxMzM3MSA0MTg2NzgwMjQyIDE4MTU2MDE1MDYgODMxNzA4MjU6awAAtA4MAA==",
+      "oracle": {
+        "NOOP": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "FIRE": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "RIGHT": {
+          "deadline_frames": 1,
+          "safe_prefix_frames": -1,
+          "deadline_right_censored": false,
+          "safe_delays": [
+            1
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "LEFT": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "RIGHTFIRE": {
+          "deadline_frames": 1,
+          "safe_prefix_frames": -1,
+          "deadline_right_censored": false,
+          "safe_delays": [
+            1
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 5,
+              "score_delta": 25.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            }
+          ],
+          "correct": false
+        },
+        "LEFTFIRE": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            }
+          ],
+          "correct": true
+        }
+      },
+      "decision": {
+        "action": "LEFT",
+        "confidence": 0.16666666666666666,
+        "latency_ms": 0.004332978278398514,
+        "raw_response": {
+          "action": "LEFT",
+          "confidence": 0.16666666666666666
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "errors_by_status": {},
+        "retries": 0,
+        "attempts": 1,
+        "fallback": false,
+        "timeout": false,
+        "invalid": false,
+        "served_model": "mock-random-v1",
+        "probabilities": null
+      },
+      "latency_frames": 1,
+      "ordinary_correct": false,
+      "deadline_correct": false
+    },
+    {
+      "role": "decider",
+      "seed": 1,
+      "example_type": "finite_deadline",
+      "step": 75,
+      "frame": 296,
+      "state": {
+        "ram": [
+          0,
+          7,
+          0,
+          210,
+          145,
+          162,
+          226,
+          183,
+          68,
+          30,
+          124,
+          255,
+          255,
+          50,
+          255,
+          255,
+          0,
+          36,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          82,
+          0,
+          29,
+          43,
+          39,
+          117,
+          180,
+          0,
+          36,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          110,
+          0,
+          23,
+          0,
+          28,
+          14,
+          30,
+          94,
+          126,
+          255,
+          255,
+          255,
+          195,
+          44,
+          102,
+          126,
+          126,
+          126,
+          255,
+          255,
+          255,
+          195,
+          60,
+          126,
+          126,
+          126,
+          126,
+          127,
+          127,
+          255,
+          195,
+          3,
+          0,
+          112,
+          3,
+          153,
+          0,
+          3,
+          0,
+          79,
+          0,
+          16,
+          64,
+          246,
+          64,
+          79,
+          7,
+          246,
+          40,
+          63,
+          80,
+          229,
+          24,
+          0,
+          52,
+          82,
+          196,
+          246,
+          20,
+          7,
+          0,
+          226,
+          0,
+          0,
+          0,
+          0,
+          0,
+          229,
+          63,
+          0,
+          0,
+          191,
+          255,
+          255,
+          0,
+          189,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          252,
+          0,
+          0,
+          167,
+          253,
+          192,
+          242
+        ],
+        "ship": {
+          "x": 38,
+          "y": 185
+        },
+        "alien_grid": [
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "alien_origin": {
+          "x": 28,
+          "y": 31
+        },
+        "alien_spacing": [
+          16,
+          18
+        ],
+        "bullets": [
+          {
+            "slot": 0,
+            "owner": "enemy",
+            "x": 62,
+            "y": 131,
+            "active": true,
+            "vx": 0.0,
+            "vy": 1.0
+          },
+          {
+            "slot": 1,
+            "owner": "enemy",
+            "x": 77,
+            "y": 495,
+            "active": false,
+            "vx": null,
+            "vy": null
+          },
+          {
+            "slot": 2,
+            "owner": "player",
+            "x": 38,
+            "y": 17,
+            "active": false,
+            "vx": null,
+            "vy": null
+          }
+        ],
+        "shields": [
+          {
+            "x": 42,
+            "y": 157,
+            "bitmap": [
+              28,
+              14,
+              30,
+              94,
+              126,
+              255,
+              255,
+              255,
+              195
+            ]
+          },
+          {
+            "x": 74,
+            "y": 157,
+            "bitmap": [
+              44,
+              102,
+              126,
+              126,
+              126,
+              255,
+              255,
+              255,
+              195
+            ]
+          },
+          {
+            "x": 106,
+            "y": 157,
+            "bitmap": [
+              60,
+              126,
+              126,
+              126,
+              126,
+              127,
+              127,
+              255,
+              195
+            ]
+          }
+        ],
+        "lives": 3,
+        "ram_lives": 3,
+        "score": 0.0,
+        "score_bcd_bytes": [
+          0,
+          0
+        ],
+        "velocity_units": "pixels/frame; null on spawn/discontinuity"
+      },
+      "emulator_state_b64": "9zwGAPc8BgAoAQAAKAEAAAAAAAAAAAAALzgAACAAAAA3MmZmYmVmNjUwNGI3NWU2OWVlMTA0NWFmOTA3NWY2NgYAAABTeXN0ZW3ITQAAJBoAADMzMDkxOTIyNzIgMTA3MzcyNjEzIDIzMTQ2NzIwMCAzOTk3Mjc1MjA4IDMzOTM3NTg0OTYgNDE0MzgzMzY4OSAyMDI2MDEwNjM3IDI1NjYyNDk2OCAyMDIzMDkyNzI1IDE1OTkwODA5MTQgMzA5NzE1MjQ2MiAxMzIwNTg4MzAwIDEyNjg2NzAxMzAgMjk3MDQ5NTAyNSAxOTI4MTcwNzQgOTcxMTA3Mjc4IDQwMTk1MDQyNyAxNzkxMjAxMjUgMzAzMDUyNzA4MCA0MjM4NzUzODk4IDMwMzU1MzYxMzQgMzQyNzYzMCAyNTE5ODYzNzQ1IDM0NDkyNDkxNjMgMjA5NTYzNDYxIDM5MDQwMzAzMSAxNjkwMjk3MjAyIDc0Nzc4NDE5MSAxNzgxOTgwOTg4IDQ2NjEzOTMxNSA0MDU4ODg0Njc0IDMwNjQ0NjA2MTcgMTI2ODExNjAyOCA4MDgxMjg0MzkgMjkyNTk5NDcxNCAzMzk2MzAwNDggMTA4NjI5NTA0OSAxMTAyNzQzNTA2IDIwODExOTQ0NzQgMTQwNzM4Njk3OSAzMzc2Nzg5MzUgMzI3ODk2MDY1IDMyNDkwNDcwNjAgNDEyNTExMjAwMyAyMTE0MDgzNDQxIDI5OTI4NzMxODYgMjMwNjA1MTg1OSA2NjQ3MDE4MDEgMjUxNzA1Mzk4NiAzOTE4MTI4OTgyIDUyODk5MDc4NCAxNzMyNTAyNTIwIDE1MTk5MjM5NTggMzM5MDI2MjA2MSAyMTk5NTM3NjMzIDIyMzIxNDU5OTUgMjMyMjIyODg3NCAzMTMwMDgwMzU4IDcyNzM0MTEwNyAxNjMxMzkzNzU5IDE1NzYxNTU0NzkgMjMyNTMyNTIzMiAyMjg0MzY0Mjg1IDIwMjQ5NTYyNTUgMTcxMjE3NTMyMyAyNzA2MTUxNjI0IDEwOTIwODE4NSAzNTk4MzI0NTMgNjcyNDM0NDk4IDE3MTczMzY1MzIgMjc2OTU4OTMyIDQxMTExNTg4OTYgMTY3MDgwNzM0MCAxMjUyNjcyMTQzIDEyODYzNTcyMDUgMjc1OTAwMjIyOCAxOTQ4NDgyOTExIDM4NTMxMDg0NTYgNDI0MTA2MTAwMiAyMjU4MDYyMzA1IDM5MDA4NjE1NDAgNDA2NDg2MzM1MyAxMzQ4MzAwNTM3IDE1Nzc1NTAwMDAgMTMwMzA4NDk3NCAzMTgzOTM3NTA5IDIzNjA0Mzc3NCAxNzA0OTExODkwIDE2MTUwMTM3MjQgOTc0ODAyMzE5IDE5MjU5MTQ5NTQgMjM0ODk1OTM1MSAzMTg0MzU1ODUwIDM2OTE3MTk3OCAxMzcyMjA2MjkzIDE1NTc2NzkyNDAgMTE3NTA5NDI1OCAxNjUwOTg5NzY1IDQxMDYzMTg5MDcgMzg0MjgyMjkxMiAxMTQxOTU1NjA4IDE4OTc4NzEzMDMgMTY4NzQxODg4OSAxMDYyNDMwOTIgMjA4Nzg0MjAwMSAxNzUzNDM2OTI2IDE1NDY4NjAxNzAgMzkyOTEzOTM5OSA2ODE0MjU0NzcgMjczMTMwNTc3MSAzNjU5NDEzNzkyIDIzOTAwNTA0OTkgMTM4MjYyNjMzMCAyNzAzMjk1MTMzIDE2NTcxNTE2NjYgMTc1NDI0NzgzMSAxMzY1MDk3NTExIDE4OTA5NDc1NzYgMjg5NTEwODQwOCAyMDIzMTQ1MTgyIDIzNDQwNjg2MDAgMTc2MzUyNjMwNCA0MjU3MjIwNDg0IDE1OTA3MDI3NSAyMDg5Njg0NTkyIDk4NzU3MzM5OSAyMTg1MjU4OTAyIDUzNDk3NTA4MCAyMDUxNTMzODM3IDEwNzQxNzEzMzAgMzkwNTQ0MDI0NiAxNzQ5ODMwNTc3IDEyODIwODQyMTcgMTg1NzY1MzA5MCAyMTM3OTI3NzA2IDQwNzYxMDUzOTUgNDAzNDY0OTIxMyAxNDk4Mzc3NDEyIDM1Mzg4MzU0MDAgMzQ4MjQwNDY0NyAzMzExMzU5NTU3IDMzNTAzNjQzMzYgMTQ5NjQyMTA0MiAxMDU2Mjg3OTIzIDIzNjk2NDYyNjAgNzU3NjM0Mjc2IDM0MDQ1MTQwNTkgMjAzMDA1ODMwNCAzODg1MjQ3MTY2IDI0MDc0NjU2NDMgNDA5NjIyOTA2NCAyNDQ5MjU0OTYzIDU4ODkzMDkzMCAyODYyMTk3NTI4IDgyMDQ3MjkyOSAxMTY2OTgyMTMgMjYwMjIzOTQgMjg3MTA1NzMyIDQyMTI4OTA3OSAzNTA1MjAzOTkxIDQxNDY4MzY0ODkgMTk5MDU4MjAwIDQyNjE5MzM0NzEgMzgzNjkyMzgyOCAzNDUxMjQ5NTAwIDM0MDY0MDA2NzcgMzk1NTMxNDMzIDMyNTU2ODczODUgMzczMjQ4NjQ0NyAzMzE1NjA0MzYyIDg2NjUyOTA4NCAzOTMzOTc4NTg4IDI2MTc1MzY0NCAxOTc4OTg3OTE4IDI4ODUxMTgzNjYgNDA4MzQ5MjgwMCAyMjA2NTM0NjkyIDE5NDY2OTAxMDAgMTgyODExNzc5MiAyOTU4ODg5NTcgOTYwMDU0ODU4IDE1ODEwMTI1ODggMzUwNzA1NjQ0NCA2MDM2MjY1MTkgMTIwODU0MjU0NCAyNjc1MDM2OTc5IDExNDUzNDMxMjQgMTM4MTY0MzUyOSAyNTM2NTE5MDE3IDIxMDI2MTg4MSAxNDkxNjgyNTYwIDk1NjA4OTI1NyAxNzEyMTY5OTcwIDI0MTE5NjkzMTcgMTU4NDQ3Mjc0IDEyNjI3NTA4MTAgMzYwNjIyMTg3MiA4MTIxNzIzOTMgMzU3ODgzNDg3MiAxNTA4MjUyMzUgMjEzNTU3NDUyIDE1MzEwOTI0MjYgMjYyMTg5MTk0MiAyNDI2ODEyODQgMTA2MzcyNTk4OSAxMjcwNDMxNzkgOTMzOTczMTMwIDQwNjUzOTgyMTQgMTk5MjAyMzMxMCAzMjM1MTM1Mjk3IDEwMTMyNzA2MjUgMzk5ODc3NTQ1MyAxNDM5MDQ5MTM1IDEzNjA1OTIxMjggMzA0MTQxODE3NiAyNTY2MTk0OTE4IDM2NTA2MDAyNzMgMzUzMDMzMTMyMCAzNjE0ODA3NDIgMjcxOTIxNTcxMCAyMDExMzMgNDkzMjYwNzA3IDc2ODIwNjc3MCAyMzQwNzI3OTY2IDI0ODI3Mzg5MjkgMjg2MzYzNTAxMyAyMDkzNTM4OTIyIDQwODAyNzI1NDMgMzEyNDg0MjIyOSAzNDE4ODM5MDA1IDU4Mjg0Mjg4MSAzNzA4OTg4NjI1IDIyOTE3MDAyOTUgMjc5MTAyMzUyNyAzMjU4ODM0NTY4IDIwMTgzOTAzNDMgODA3NTI4NDYzIDM0NzI0NjM0NTMgNDI2OTk3NDE1MyA0MjMyODM4MTE4IDMwMDM4Mzg0MTQgNDczNDgzNTA2IDQ3OTEyMDExMyAzODg0NDUyNzQ5IDE2MDYyNTgzMDMgMTE0OTAxOTk1MiA0MTc3NDA4MjA4IDI2NTM4OTI1MzkgNTM5MjU0OTggNDA3MjY2MzQ1NiAyNzA0NTY2NzM0IDI1OTgzNjU5NDggMjIxNTM1NTgzMSA5NDMyNzU3NTUgMjkxMzkwMDM0NiAzMDc1OTA4MjUyIDM0MzEzODA5NTUgNDAzMzk0NjA0NiAyNjYwNDA4NTYgMjQyMjQ5OTg0IDQxMjQ0MTU2MjUgMjY5NDQ2MzQ4NCAzNTA3MjM2NTQ1IDUwNTU2MjY0NiAxODM5Mjk2MDU5IDU0MTI5Njc1MiAzNjUyNzY1MTE5IDIxNDUwOTk5NjQgNDY3MDQ2NjkwIDUyNDMxODIwNCAxNTY4MDQxNDcxIDEyODE1NDAyOTggMzg1MzQ5NzUxNiAxNzkxODE2MDk3IDM5NTE2ODcwOTUgMTc3NTcxNTc0MCA0Mjc0NTc5MzAgMTA5NTI2Mjk4OCAyOTUxNDgyMDQ0IDc1NjE0OTM5NCAxODczNDQzMTI3IDE2Mzc0NjQ1NTYgMzYxNzY2NTMxMiAxOTEwMDU0NzY3IDE2MTg4MjI2NjMgMjM4MzQwMzAwOCAxMTg5NTYzNTAxIDE3NDY1OTY5MjggMjU2OTAyMTUxNCA0MjI5OTc1MTggNDI1NzI3ODc2NSA4MjU5MTE1MDIgMTk0MjE5ODUxMSA0MDE4NDUxODU2IDIxMzk5MDE4NjYgMzEzMTc2NTUzOSAzMDEwODI3OTU0IDQzMzYyODQ0NiAxMzE5NjQ2MzQxIDczOTQ2NjY5MiAxOTc4NDcwOSAxNTgxNTU2OTA3IDYzNTA0MDQ1MyAxMzYzODgzNjI5IDE2MDY0MzY0MzMgMTQ4NzcwMzg3OCA4NjczMzgxNzAgNTA1OTQ0MDkwIDQyMTgyNTI3OTUgMTY3NDQ1MjExNCAyMDQwNTkxMDM0IDI3NzY4MTU3NDcgMjg1MjM1MzQ0MiAyNzYzMDAwMjg2IDExMzY1NjY2NjcgMTYzNDYzNzYxOCAxMTczNDE4OTc2IDU2NTg3OTQzMSAyNTA0ODc2MDM4IDI2ODQ2ODQxMjAgNDI2Nzc3NDUzNSAyMTI5NTY2MzYyIDE2NjI4NDE4MzggNDExMDUxNTM5IDEyOTk0NjA2ODAgMzkyMTY2ODUwMyAzMjE3MjUxNjMxIDMxNzM3Njc1NjUgMTYyMTMxOTIyNCA3NjIyOTQwOTEgNTUyMzU3MjIyIDI1NTc0ODUzMjYgNDkwNzY0MTczIDM0MTAyNzI2MjcgMjUyNTUzNzAyNyAxNjgwNTI5OTc3IDE4ODIyMzk4MSAzODk1NTg1MTExIDU4NDc3ODc0NyA0MTE3MTYxNjk1IDUzMDA3MDEzIDE5ODU1MDU3NzkgNDI4MTQ4NzQ0NSAzNzIzNTc1NzggMjg2MTY1NjIwNyAxOTQ5MDg3MzU5IDM5MDQ4NjAwNTMgMjYwNjI1NTYzMCAzMTg2NTcxNDIxIDI1MDAyOTI1MDkgMzg5MjU4NTExOCA0MDAwNDkzMjY5IDIxOTIxNDcwMjcgNDI5MjEzNDEwNyAxMzExODUxMjk1IDMwMjI4MTc5ODIgMTE2NzQyNjc3IDE1ODY4MDkxMzkgMjI5NDA5NzA2MSAyNjgxMDY3MjE1IDI0MTIwMTcxMDIgNjA2MTE5Nzg2IDEwNjk0MDYwOSAyOTQ0NDMzOTQxIDc5NDE5NTIwNCAzNTcwODgwNjQ2IDIxOTIzNzI1ODggNzQ2ODQyNzE0IDIyOTcxNDM2NzEgMzgzNDcyODk5MSAxNzQ1NzkyMyA0MDQ2MTA1ODk1IDM5MDAzNDc2OTMgMzQ2Mzc0MDE5MiAzOTU2MjMyNjUwIDY4MDgxNDgxIDk3NDEyNzgxOCAzMzEwNjk1ODU2IDE4ODMyNDE2MzAgMjIxMDk3MjYwMyAzNTczNjkzMTgyIDI0ODkxNjcwNTkgMjQxODU0Mjk2OCAxMjA4NTA3MjYgNDE2ODU0NTI4MyAxNTM1MjY0MjYyIDI5NTM4NjM2MjYgMTE5NTU0ODE0NCAzMjQ0NjQxMDU0IDM0MjE3NzYyNTEgMzgyMTkwMTQxMSAyMTg0NTU4MDYwIDIxMzE2OTk0NDMgMTcwMTgzMTA0OCAzNjgzOTk1MTY0IDMyMTM4NDczNzEgMjUxNTUzNTAyIDIyNzMxNDIxODQgMjYwNTExNzgxIDI5NzM0NTU3ODkgMzY0MTQ3MjgwMCAxNDAzMTA4ODM3IDQwMDQxODAyMzUgMjYxMTM3MjYwOCA0MjExNjExNjgzIDIyODEzNTA4NDIgNDE2MzEyNTQyNyAxMzcxMjU2NzE2IDg5MTYwOTUzNCAxNDM1MDc0NzYgMzk2Mzg0NjE0NyAzMzM5NjMwNjI0IDkxMTEwNjgwMCAxNDE2NTkyMDgyIDE0ODQ0ODExMjIgMTY5NTE0MTQyNyAzNjE2ODczOTUxIDIwNzc0NTk5NTQgOTg2MTc5MDc4IDQyNDY3OTY0MjIgMTc4OTE0ODA2NiAxNTQ2MzA2NjgxIDEwNjE5MjgzMjMgNDA5MTY2NjkwNyAxNzI2MTMzMzQ5IDE0NjE5MDc1NCAxNzU0Mzg0NjY1IDM4NTUyMzMxOTIgMTQzNDMwMjYzMiAxNTI3NDY3NDg3IDMyNDEzODAwNDEgMzI3MjU0NTI1NCA3NjkzNTM4NzAgMTE4MTEwNjIzNiA0MjM0MzQ2MzEyIDc1MDQ0Mzk4MyAxODYwMTA1OTYgMjQ0MzUwNzUwMiAyNzc4NzczOTkgMzYzOTI4OTU1MSAyMzUwNzQyNzEzIDE1NTE4NDYxNDkgMTUxNzkyODE0NyAyODMzNTU4ODEwIDM3MzMwNzEwMzMgMzg5Mzc1ODM3MiAzMjU5MjI4NTQgMTkxMDY1ODg4MiAzMDUwNTg4ODUyIDczMzQwNTcxNiAzMTY1NjQ0ODQzIDk2OTExNjUzMyAyNjE2ODk0NTc4IDE3OTQyOTg0OTAgMzM4NTcxMjU5NCAzNjQzMjUwNTcgNTI1OTUwODM0IDM4NjY0MDU5NjAgMzA1ODI0NTM1MCAzNDU4NDczNjQgMTg3Nzc5MDUwMSAzMTc1MzUwMTUwIDMxNTcwOTU3ODMgMTY2OTY4NTI5MyAzNTc4NDI5MzYxIDI1OTM2OTUxMjAgMzQ1MzEyMjI4OSA3NzY4OTI4ODIgNDEwMzc1Mjc1NSAxNzYwOTM2MjY2IDM2NjQ5OTYzMzggMTk3NTQ1MDk5MyAzNjI0NTk1MzQxIDIzMzg2ODU3OTYgNDA2MjczNjI4NSAzODA4NTMyOTE4IDQyMDgzNjI0NDIgNjk4ODQ3NjYzIDM5NTcwNzI3NTAgMzUwMjkyMDAzNyAzODc4NDAxNDQzIDI2NTM3NDM0MiAzNDkxNjM1MDEzIDI2NDI5ODg4MDYgMzA2ODA1NjMxNyAzMTg0MzEwMjc3IDE4MTkzNjg0OTQgMzQyODI4ODUwMyA1MDI2NzU4ODkgMzYwNDcwODkzMSAyOTM0NTA5OTk5IDE5MjIxNTU4NDQgMTM3ODg1MjU1MSAyMTU1MDEzNDM3IDE4MTg4NzEyODAgMjQyMzYyMDM1NSAyMzYwMzI5NjcyIDEzNDg5NjM3MzAgMTAyOTAyMzc4IDU5MDY1OTMyMiAyMTQ4NzU0NzIxIDI0MTc1NDczOSA4OTgwMTE4NjAgMzg3NjQ0MTQ3OCA3MjE1NDExMDEgMzg3Mzk2NzAxNCA1MzU4Njg4ODggMTY5NTYwNTIxMCAxNjE3NTMxNzUwIDM4NTU5MTgzOSAyNDExNzc4NjA5IDM2NTU0OTgyOTUgMjg2MzY4MzkyNiAxMTcwNTc4ODgxIDExMTk4MjYwODggMjYwMDY0NTY0NSAyMzU3MTg5NDIgMjA1MDE3MTU2NyAzNDMxMDg2NjIxIDI4MTU4MjI4NzkgMjA1NzY0Nzg3NSAzNjUzMzc5OTMgMjkwNDY0ODc3IDEzMDA0ODM0NjkgMTA2MDQ1NzA3MSAxMzcwODQ5NzU2IDM2MTM5MjQzIDc0MjIxODU4MSAyNjI0ODgzOTE4IDEzMzE5NDQ3NyAyNzUwMjIzMTY5IDI2NDE3MTQxNzYgNDIyMTg0MjI2MCAyNDk1ODcwNjExIDk4NTE1MDUyNiAyNjk5NzI3MjU3IDc4MjQwNjMyNCAzOTk4NzU1MTg0IDE1NjQzMzYxMTQgMTI2ODQzOTY0NiAzMTU5MzYyMTAyIDQxNTA2OTg5OTcgMTg4MjkyODU1NyAzOTg5OTI5MTk0IDg1NTE1MDI0MyA3MzczNzc5NDIgNDIwMjI2ODA5MCAxNjg0MTAxNjMgMTgyNzQwNzM3NCAyNjY2NzA5MjA3IDE2NTAwMzY1NjIgMjA2ODQ3MzQwNiAxOTY2NDg4NDQgOTk0MDI2MTE1IDE4NDgyNzY4OTQgMTExMzc0MCAyNzk2MTE4MDgzIDkwODc5MTQ4OSAzNjQzNTE2ODQ2IDM2NzA1MDgwMjEgOTAwNjg4ODk1IDQ1MjY0MDMxOCAyNzk0NDM0NjkxIDE4NDkzNzA1MyAzMTE3MjE0ODkzIDI1Njc5MzU3MTUgNDE3NTc5MDE5OCAyNjA1MDkzODAxIDI2OTQzMzg0NjMgMzE2MTI2MDg2NSA0NjQzMDY4ODYgNTUwOTczMzY0IDM4MTE4NzM2NDcgMzg5MDAwNjI5MCAzMDA3ODIyOTQ3IDM5MTk2NDYxODAgMjMyNzg4NTQyOSAyNjU4OTM5NzcgMzE0NDczMzY2MCAyMjY4MjYwMzcg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NTU1MjM2MzIgMzI3MzcyNjM5IDI3NjMwMDIyOTUgMzU3Mzk1NjYyIDMzNjkyNjIwNDAgMjUwMTkzNDE3NSAxMjk3MjIzMjU1IDE5OTYwMTY3NzggMjA0MDQ5MjE3NyAzOTM0NDI2ODA2IDgyNDc0NDY2OSAxMDE4ODQ5MDM4IDEyMzExNzYwNzcgMTMyMzU5MDc3MCAyNTAxNjE4NjMzIDIyNDc1MjQxNzQgMzMxNjY4OTAzOCA5NTI5MTI2MjQgMzM0Njg3NzMzMyAzNzU2MDUzODExIDMwMjI1ODc0NDAgMjMzMTI1ODkxMiAyMTkyOTIxOTAwIDE3MjMxMjE0OTMgNDg1Njk0NjYyIDExNzk2NTIwNTkgMzg2OTIxNjI4MyAyNTMwMjYzNTcgMjMxMTA4NDQ5MSAyNDQ4MDgyNzkzIDMwODUzMjE2ODQgMTAzMjYxODk0NiAzMDkwOTMxNDg1IDM1MDIyMjc0MTggMzM3OTY0NDUzNyA4MTUxNzI4IDIxMDQxMDEzOTcgMzUxMTI5MTI3MyAxMzk0ODAxMzYxIDEyNzQzOTc3OTIgMjk3MjY0MDY0MyAzODA0OTg5MDgwIDQxOTI3ODEzMjIgMTIyNzc1OTY3OCA3MDg0MjMxMDcgMTc4NjYzNjMwOCAyODgyMjUxODE5IDI1MTYwODE4NDAgMjQ1NTc3MTI4MSAzODUzNTI3ODM4IDM5OTc5NTI0NjEgMzY4Njc5NjIxMSAzMTkyNzcyMzA5IDQxMzIxNzM5NTUgMjgzOTkzNDk5IDIyMDgzNDA4OTYgNDAyNTk4OTYwMiA3NjAyNDA0MyAyMDMyOTUyMjkxIDM0Njk4ODM1MDYgODE2ODY0MTcyIDM3OTA3ODkzNTUgMTUzNTA3NzQxNCAxNzI2OTM0NTA1IDM2NDQ2MDI0NSAxOTk2NDcwOTIyIDgyMzU4MzE3OCAzMjYxMDM4MzcwIDM1MzU4MzQ5MzUgOTc4MTQ1MTYxIDI0ODU0NzU4NjIgMTEwODEwOTYxOSAyMjQ5NjkyNTEgMTA3NDU5ODQ2MSA5MTQ5MDYzMDggNDE3NDM2NTgwNiAxNTQ0NDA0OTQ1IDE2OTE0NzI4OTggMTAyNTk5ODEyOSAzNDg3MTAwNTA4IDc2NzY1NDQ2NCAxMjczNDI0NDQ0IDU4NTQ3MDM5MyAyNTg0OTY3MDA4IDQyMzczMDQxOTkgMzM2Mjc4MzI3NiAxNTk3MjI1MzA0IDQ1NjUzNzgxOSA5Nzc2NTYyMTkgMTk5ODk5NjQxMSAyNTI5MDI0ODI3IDI0MjQ3OTU3MzQgNDA5NTc1NzMyMiAyMTQyOTEwMTM0IDMyMDM0NTg4MzcgMTQyODAyMTI2IDM3NTA2MzMwMTQgMjAwNTc1MDU5OSAyNDYxMzA3OTk5IDk0MjE3NDM2NiAzNzcyMzg1NzM3IDM0MDc5Mjk0NDMgMjQwNTA4MDQyIDE5NTc3NDQ4MzQgMTYyMTA5OTc1MSAyOTc0NzI4NTE3IDM4NDE0NjIwOTggMTkwNTA5MjMxOCAzNjA4ODkwOTMwIDM1NzAxNDI3OTYgMTU5OTM4MTQ5NyAyMjkzOTc1Njc2IDI0MDc1NTY5NTAgMzI0MzkzODQzNSA3MTgwMTYxOTcgMTI2MjA1OTc4OSA1MTUwMzAwMzcgMTExMTgxMjk5NSAyMzEyMDI5ODI0IDE5MzYzMDM1MSA3OTg3NDY1MTUgMzk3Nzg1MDc2MiAyMTA4NDQzMzQwIDM4ODYyNTc1NyAyODk1Mzg1MjA0IDIxNTY5MTU2MzIgMzk0MDIwNDU4OSAzNTQyNzU3NTcwIDMxNDg3ODA0MTAgMzA5NzQyNjg1NSAyNjk2MjU2MTIwIDI3NTQyMDg3MDUgMTU1NTkxODg2OCAzNTYwMTEwNDAwIDM4MTM2MzM5MTMgMzQ0NTgwNjUyMSAxMjAyNzgwODMyIDMyNDg4NDQ3NTUgMjI2Mjg5Mzk0MSAxNzM1NjA3MzQwIDMzMTk1ODU4OTMgMTc1ODkyODM1NSA3NTczMTc1NjAgMzY1NDE3MDU0NiAyMzM4OTM0NTk4IDI1Njg2OTQzMDMgMzQyMzMwMzQ2MCAyMDgyMzU0NTY3IDQwMDc5MDIzMCAyNTkwODA4NDM1IDMwNTg4NjAwNzEgMzk1NTE1MDQ3IDU5NDgwNDExMyAxOTY2MDk2Mzg4IDE5Njc1NTM0NjggMTI4NDIzNTY5MiAzNDQzNzczMTUxIDExMTYzNTk4MDkgMzcyMTYxMzI3MSAyOTc3NTkyMjQzIDM2ODY3NDg0NyAyNjMyODA5MTAzIDY5NjAyMzYzMyAyMzAzNDQ4Mjk3IDM5ODYwMjUzMDggMTU1Nzk3NjcgMzkzNTMyODE4OCA4MTM4MzQ4OTMgMTUzMjY0OTIxNCAyODg3NzU1NDg2IDE5NTU3OTk4MTMgMjg4NDE5ODA5MCAxNTQxMzk2NjkgMTc3NjQ3MTc5MiAzNzcyMDg1MzA3IDI2Mjg3NzE3NjkgMTIyMTIzMzc0MSAzMTA5MDc3MTgwIDI2MDM0MzA5NzggMjY1NTEwMTQ4NSA0MDA1NjE0NTAzIDM0MTk0NDQ5OTQgODEyNTU4OTcwIDEzNjY1NjMwOTEgMzYwNTcxMjk1MyA1OTQ1ODA2MDAgNDEzMjQ1Nzg4IDMzMDE0NTAyNDkgNzc4MDQyNSAxMzExNzYxNjUzIDI4NTA4NDUwNjcgMjMzMjY4OTUzOSAxMjI5Nzg4MzE2IDI1MDc1MzQzNDMgMTcyMDc2NDc4NSAxMzE0NTY2MTcwIDk2ODUyMzYwMCA0MjA3NTkzMDQ1IDM1OTAzMzE4NjggMTEwNDU5OTc4OSA4MDg0MzQ3NCAxNDc5MjA4NTcgMzc1NjI2OTY0OCAyMTA3MTYyNTg2IDQyNTY2MDEzMDYgMjIxMjg4NTg4OSA4NjgwNjc2MDggMjMyNzc2MzE0IDQxNDgxNTM5NTAgMTQzODY5MTU1MiA1MDYyNjAxOTcgOTQzNTM3NTYxIDMxODY0OTc2MjMgMzg3NDEzMTEzOSAzMjY4MDE3ODM0IDIzMDQ4NzcxMjQgNDIwNTEzNTIzIDE5NzY5NTk4MDIgNDQzNjYzNDUwIDMwNjY0MDM1NDggMjM0MDc5NTAzMiAyMTAyNjc4OTUyIDM4MjgyODE1MDYgMjY2OTU3NjIyIDI4MTEyNTQ3MTMgNjY0MDcyNDE5IDE0Mzk2Mjg2MTIgMjkzNTc3OTc1NyAyNzM5MDI3ODg5IDQ3NzI3NzYwMiAxNzE2NjM0NDM1IDM0MjE1NDYyNTggMjI3ODEwNzc2NiAyMjE2MjIwODU1IDMwMTA0MDk5NzMgMzg5NDUwMjczIDc4MTc5NTQzMyAyMDAyNzg1ODY4IDc2MTk0ODU3NyAzMTg1MDU1ODU4IDQ4NDE2NTYxOCAxNzgxNjMzMTQyIDMzMjQ1NDk1MTkgMTQ2MDQ4OTIwMCAyOTkzNzU1ODAzIDMzMjM5MzQ2MjUgMjY1MzMyNjE2NCAxNDM3NjIyODY3IDMwNzc2ODM4NTEgNDE0Nzg0NzUyOCAzNDcxODM3MDY4IDMzOTc0MDQyNTAgMzUxMDgwOTUxMCAzMDM4NjA1OTc2IDk0Njg4NzQyOCAzNzQxMTkzOTY2IDI1NTE4MjQ1MDEgMTIwMDk4OTk1MSA2MTc0MjY5NTQgMTk1NzI5ODM4IDMxNTY2MTk2MTIgMzc3NDQ3OTk4MyAzODk5Nzk5ODQ0IDQyMDc5NTI1OTkgMTQ1MDIxNzcyNCAxNjU3MjIzNTgxIDMxNjU5NDI1NjQgMTgzMTk0Mzk1OCA5MzgyNzExMjUgMzg4ODc0NDczMiAxMzcyNTkwMDg2IDI3OTY1NDQ5NTggMzE3MTc1NzYzOSA0MTQ1ODk0Mzg4IDMyNzQzNDk5NzAgMTU2MjI2NTEwOSAxNTQ3OTAxNDE1IDExNjg3NjY2MTcgMzI5ODE0Mzk1OCA4NjEyMTg5MjUgNjc4NTYwMDM1IDEyMDQ5MDA5NjMgMzM3MDkzNTE0OSAxMTg5MjA1ODM2IDEzODkzNDUzMjIgMzYyNTc4NjUwNiAyMzg1MTczMTc1IDM3NDY2MDcyNTMgNDAyMzgxMjc5NCAzNzUyMjU4OTI5IDM2MjU5OTQ5NjggMjQxMjEzNjMwNCAyOTA4MzIyMjAzIDQwMTI5MDkyIDE4NTI0NjI1MTUgMTM4OTA3NjY2MCAyNDc0MTIzMjAzIDY3OTU4ODUyMSAxMDg4ODM3NDUxIDIyMDIwNTQ0MTIgMzAwOTI3NzA1OCAzOTA3OTkyMDA1IDE3NTU3MzQ5NCAzNTgzNTMzOTcxIDMzOTQ0ODY0OTkgMjc3NDkzOTM5MSA5NzYxNzQxMDkgMjk4NzYzNzg2OSAyMzIyNTg4ODc3IDE5NzM4MzkyMDIgMzE1MDM2Mjk4MSAzMjkzNjgyNjM3IDExNzk3NDE4MDggMTE0MDk4NjcxMyAxMDAxMzY4Mjg2IDEwOTg3NTU5NjQgMzE3MjY3NzQ5MyA0MTk3MTUxOTAzIDE0MDAyODIzNDAgMzkzOTA0NzI2MCA5NTQ4Mzg1OTIgODEyMTY1MjQzIDI1MDcwODQ2MDIgMjgzNzE3MzQ3MSAzMTQ2NzE3NTExIDIxNjQ3NTI5MDggMTc2MTU5MTcxMCAxMzQyNDAxNzEyIDI2NDM0NzkyNzMgMzY4NDI4NjUwNyA0MDc1MTAyNDc3IDI5NzI0MjM1OSA0NjcyNTQzMjEgMTUzMDQ2ODI2OSAxNjI1NjI1NDkyIDI3MDI0Mjk4OCA5NzY1NzE5MTggMzY3MjAzODU4NiAyMTI4ODc5MDg0IDE1MzY0MDU0MiAxMDUxMDM3MzI5IDMzMzg3MjUxNzEgMTA0ODMxOTA5OSAxNTk0MzQ3NTg1IDE4MDU0MDg4NDggMjU3OTM3MzYwMSA4NjA4OTM2MjYgMTI0MTQ4NzAzIDk3MTk1NTA4OSAxNDMxMjA4MDUyIDMyNzQyMTI1NzkgMjc3ODAwMDM1MCAzMzkxMzUyNzMwIDkxNTkyMDk4NCA0MDc3MjA4OTYgMjY4NjQ2NDk5NCAzNjkwNTEzODQ1IDQyMjE3NjE0MzkgMzg4Mjk3OTc2NSA0MjU5NjQyNTQ1IDMzMDQyNTEyODkgNDQ5MjYyNjY1IDI3MTM5NTM4MzEgODQ1MTE5NjIyIDE1NDgzOTEyNjkgMjUzMTg2MDE0MCA3MTIxNjc2NDYgMjA0MzgzMDExIDI2NjU5ODIyOTcgMjcxOTg2MDQ2NyA3MTAxMTg3NDYgMTI4OTQ5MDgzNSAxNjM4OTI2MzQyIDMyNzUyODM3OSA0MTE5MDQ1MDk2IDkxNDU5ODQ1NSAxODYxMTA2ODEzIDI0MzU0OTY0NCA0NDQyMDQ3NzEgMjY0OTYwOTQzNCA4MTU2NjY1NzQgNDA5NTM2NTQ1NiAzMzAxODE2Mjg4IDI3NjQzNzg1NzYgMjY0MTkzNjI5MyA0MTgwNTE4MzE0IDkyMzU5NDQxMSAxNjgyNzg0OTA2IDEwMjY2NjM2OTYgMzc5NzE4MTY2OCAxMzk5ODMxNzA1IDM2NzI1MDcwOTYgMjgzMDU5ODE4MSAxNDA5OTM5NDY3IDE1Njc0NzA3NzYgMTU5NDE3ODQ1OCAyNDI4MzgwMTMxIDExNzY5NTA5MjAgMjEyNDQxNTQwNSAxNzE2NDk1OTgzIDM2MjYxNTU5NTIgNjY5OTE4MTMgMjg2OTM1ODQ0MCAxODg0MzE4OTA1IDYxMTY3NDUyOCAyOTE1MDczNTgxIDEyMTExMDk5MDggMzQ2MDc1Mjc5MiAyMTM4MDMxMjMzIDM0MzMxOTQyNzcgMTMzMzYxOTAxMSA3MTk5NjQ0NTEgMTI4NzYwNTA4NSAxMTM3NDg4ODY4IDIyMjg1MDQyNjIgMjM0MzY2NzE3OSAzMDIyNDMyMDkxIDUzMzE1MjgyOCAyODU2OTk2NDQ3IDEzNjI2MzIzOTkgMjE3MzUzNzkzOSAzNjI4ODE3NTU5IDEyNjc4OTI1NTMgNDIxNDAwMzY0NyAxNjQ4MTEzMzk1IDMzNzQ1MDg5NTUgNTU5OTkxMzEgMjY4NDQ0MjQ3NSAxODc2NTg0MTAxIDQxNjUxMjU5MjggMzMxNDgyNzQ4OSAxMzQzMTM5Mjc1IDMwMTc5NTk1ODQgMTk1MDgyOTExMCAyMTE0Mzk5MDA1IDM1NDE4MDAwNDQgNDE0NzUxODgzOCAzNTM1ODgzMzkxIDIzMzI0ODkzNTkgMTE2MTEzNTcxIDIzNDQ4ODYxOTQgMzE2Mzc1ODE4NCAxMjU5NTI3OTYyIDUwMDY0NzUgMzI1Nzc3MDAgOTg5NTI3MjE2IDk4OTk0NDI5MyA0Mjg2NjIyNzUyIDM1NzEzMDA2OTggMjYzNjI5Mzc4IDg2NjY2ODkzNyAzNTc0NjI4MTQ4IDI5MzE3MTg2NjAgNTAyNDQ4NzIxIDMzODc4NzY5NjcgNDI1MDk1NjgwMSAzMzAwMTQ5NjUgMzMxMzQ3NTc1MCAyODM1ODkzNTY1IDMwMzg2MDgyMDggMTM4MTQxNzExMCA0MDc5MTQ4MjI2IDg0MjcyNTU2NCAxMDkyNTY1MzEyIDM4ODI4MjA5NTMgODYyODI4NTI5IDI2NjA5OTg2NzAgMTg5MjcxMTkzOCAyOTExMTIzOTk3IDI4MDExMjA2NDYgMjQxNjY3ODg4NyA0MjQ2MzYxOTczIDI2MDQ1MjI2NTEgMTE4MTI0MzgzNyAyMjg4MDAyNzc3IDMwMTU3NzQ4ODcgMjQxMzE4Njc3OCAzOTcwMjQ0NDM0IDUxMTA1NjQxMCAyNTgwMjI1NjI5IDIyNzA0NjMzMzAgNDQ5NjU4NDQ0IDI4Njg3ODI3NCAyODU1NTQ5NTU1IDM4NTA2MTQzMDkgNDIxMjU3Mzc4OCAyNzQyOTkzODYwIDE2MTAxOTYxMiAzMjQ3MzEyNDEzIDM5ODE2MTQ0NjQgMjY4OTU5Nzg5NCAyNzI3NzQ5MjI3IDQ0NDgzOTI1OSAyMjM5NDQ0NzE4IDIzMDc0ODkyOTAgMjI1NDU2NDUxNSAyMjcyNTY2NDMxIDc3OTk5NDExMCAxMjgyNDcxMDUwIDEyMTMzOTIwODYgMjM1Mjg2Mzk2NCAzNDk3MTg3MzA2IDE0NzQ5NDQwNjcgMzUwNTAxMzcxNiAyNDYxNTM1MzQ4IDM5MzQ2MTAzNjIgMzUwMzQ3MjEyOSAzMDk0MzIzNTU1IDMwMDgzNjYyNjEgNTEwNjk4OTA3IDMzOTA1ODM2NjYgNjc3Mzc2NjMgMzYwNTQ0MTczNCAyMTQ1NTYyMTI0IDM1Njg1NDYwMjkgMjMwNzM2ODA0IDI3MDg3MjA4MjAgMzQ4NDQwNTY3MyAyNzQ5NzgyMjUxIDMzODIxMDc4NzIgNDA4NjAyMjIwOCAzNjg2MTQyMjEwIDE4NjQyOTgyMDIgMjYyMzQ0MTYzNCAxNTMzNDk0MjcyIDY3NzE2MTI5NSA1NjQwMTg4MTkgMTY1ODAwNDEzMCAxODEwMTYxMjE4IDIwMjEzNjE5MiAyNjY4MzYzMzcyIDkyMTEyMTkxOCAzNzcxMDcxNjE5IDI1NzQ4MjQyNTEgMzE5Njg5NjAzOCAxNTE3NzE3MzMwIDI4NTcyNTE1NDcgMzk1MzE2NjU5MiAyOTI5OTE5ODE3IDY2MTcwODEwOCAzNjcxMzQyMDU3IDM1MDA5MTg1NyAyOTQzMjU5NzUzIDE0NDU1NDcxMzkgMzYyNjA2OTQ3MSAxODY1NzAzNjUwIDE5MjQ5MTA1MDMgMTc3NDgzNzAyNCA5MjcxNTc2NDYgMTA4MDc0OTUwMCAxNzg3NTM2MDAwIDI2NzY3MjM0NzAgMTE0NDU2NDQ1MCAxMTYyMDcwOTEzIDI1NTY2OTM5NjcgMzAyMjAxNzI4MiAyMTAyOTY0ODU0IDE3MjUwODgxNzcgMzU1NzgwNjE3NCA1Mjc0ODE5NjIgMTk2OTQ3NTUwMyAyMTAzOTAyOTg4IDE4NzAzMzA1ODEgMjA2MjU0MDA3MyAyMjc5MzI0MDY1IDM2NTg4NzM1OTEgMTgyMTU5MzczNyA4MjI1NTA4MzcgMjc0NjMxODA5MSAxMDk1ODMwMzI0IDQwNTUxMDcxNzEgMjUwNjM5NjY3NSAyNzMxNTkwNzgwIDIwMDE2NzI2MDIgNTgzMzgwNTA5IDE5MzU3MjM4NjEgMTQ1Njk1NTM5NSAxMTc3OTQ2OTIyIDE0NjQ4NjQwNSAyMDQ2MDMyNzY1IDE0NTEwNzA3MTQgNDk3NjcyMTk0IDI1NzcxMDgzMDYgMjE5NzkxMzM3MSA0MTg2NzgwMjQyIDE4MTU2MDE1MDYgODMxNzA4MjU6awAAtA4MAA==",
+      "oracle": {
+        "NOOP": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "FIRE": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "RIGHT": {
+          "deadline_frames": 1,
+          "safe_prefix_frames": -1,
+          "deadline_right_censored": false,
+          "safe_delays": [
+            1
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "LEFT": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "RIGHTFIRE": {
+          "deadline_frames": 1,
+          "safe_prefix_frames": -1,
+          "deadline_right_censored": false,
+          "safe_delays": [
+            1
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 5,
+              "score_delta": 25.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            }
+          ],
+          "correct": false
+        },
+        "LEFTFIRE": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            }
+          ],
+          "correct": true
+        }
+      },
+      "decision": {
+        "action": "LEFT",
+        "confidence": 0.16666666666666666,
+        "latency_ms": 0.004332978278398514,
+        "raw_response": {
+          "action": "LEFT",
+          "confidence": 0.16666666666666666
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "errors_by_status": {},
+        "retries": 0,
+        "attempts": 1,
+        "fallback": false,
+        "timeout": false,
+        "invalid": false,
+        "served_model": "mock-random-v1",
+        "probabilities": null
+      },
+      "latency_frames": 1,
+      "ordinary_correct": false,
+      "deadline_correct": false
+    },
+    {
+      "role": "baseline",
+      "seed": 1,
+      "step": 75,
+      "frame": 296,
+      "state": {
+        "ram": [
+          0,
+          7,
+          0,
+          210,
+          145,
+          162,
+          226,
+          183,
+          68,
+          30,
+          124,
+          255,
+          255,
+          50,
+          255,
+          255,
+          0,
+          36,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          82,
+          0,
+          29,
+          43,
+          39,
+          117,
+          180,
+          0,
+          36,
+          63,
+          63,
+          63,
+          63,
+          63,
+          63,
+          110,
+          0,
+          23,
+          0,
+          28,
+          14,
+          30,
+          94,
+          126,
+          255,
+          255,
+          255,
+          195,
+          44,
+          102,
+          126,
+          126,
+          126,
+          255,
+          255,
+          255,
+          195,
+          60,
+          126,
+          126,
+          126,
+          126,
+          127,
+          127,
+          255,
+          195,
+          3,
+          0,
+          112,
+          3,
+          153,
+          0,
+          3,
+          0,
+          79,
+          0,
+          16,
+          64,
+          246,
+          64,
+          79,
+          7,
+          246,
+          40,
+          63,
+          80,
+          229,
+          24,
+          0,
+          52,
+          82,
+          196,
+          246,
+          20,
+          7,
+          0,
+          226,
+          0,
+          0,
+          0,
+          0,
+          0,
+          229,
+          63,
+          0,
+          0,
+          191,
+          255,
+          255,
+          0,
+          189,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          252,
+          0,
+          0,
+          167,
+          253,
+          192,
+          242
+        ],
+        "ship": {
+          "x": 38,
+          "y": 185
+        },
+        "alien_grid": [
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "alien_origin": {
+          "x": 28,
+          "y": 31
+        },
+        "alien_spacing": [
+          16,
+          18
+        ],
+        "bullets": [
+          {
+            "slot": 0,
+            "owner": "enemy",
+            "x": 62,
+            "y": 131,
+            "active": true,
+            "vx": 0.0,
+            "vy": 1.0
+          },
+          {
+            "slot": 1,
+            "owner": "enemy",
+            "x": 77,
+            "y": 495,
+            "active": false,
+            "vx": null,
+            "vy": null
+          },
+          {
+            "slot": 2,
+            "owner": "player",
+            "x": 38,
+            "y": 17,
+            "active": false,
+            "vx": null,
+            "vy": null
+          }
+        ],
+        "shields": [
+          {
+            "x": 42,
+            "y": 157,
+            "bitmap": [
+              28,
+              14,
+              30,
+              94,
+              126,
+              255,
+              255,
+              255,
+              195
+            ]
+          },
+          {
+            "x": 74,
+            "y": 157,
+            "bitmap": [
+              44,
+              102,
+              126,
+              126,
+              126,
+              255,
+              255,
+              255,
+              195
+            ]
+          },
+          {
+            "x": 106,
+            "y": 157,
+            "bitmap": [
+              60,
+              126,
+              126,
+              126,
+              126,
+              127,
+              127,
+              255,
+              195
+            ]
+          }
+        ],
+        "lives": 3,
+        "ram_lives": 3,
+        "score": 0.0,
+        "score_bcd_bytes": [
+          0,
+          0
+        ],
+        "velocity_units": "pixels/frame; null on spawn/discontinuity"
+      },
+      "emulator_state_b64": "9zwGAPc8BgAoAQAAKAEAAAAAAAAAAAAALzgAACAAAAA3MmZmYmVmNjUwNGI3NWU2OWVlMTA0NWFmOTA3NWY2NgYAAABTeXN0ZW3ITQAAJBoAADMzMDkxOTIyNzIgMTA3MzcyNjEzIDIzMTQ2NzIwMCAzOTk3Mjc1MjA4IDMzOTM3NTg0OTYgNDE0MzgzMzY4OSAyMDI2MDEwNjM3IDI1NjYyNDk2OCAyMDIzMDkyNzI1IDE1OTkwODA5MTQgMzA5NzE1MjQ2MiAxMzIwNTg4MzAwIDEyNjg2NzAxMzAgMjk3MDQ5NTAyNSAxOTI4MTcwNzQgOTcxMTA3Mjc4IDQwMTk1MDQyNyAxNzkxMjAxMjUgMzAzMDUyNzA4MCA0MjM4NzUzODk4IDMwMzU1MzYxMzQgMzQyNzYzMCAyNTE5ODYzNzQ1IDM0NDkyNDkxNjMgMjA5NTYzNDYxIDM5MDQwMzAzMSAxNjkwMjk3MjAyIDc0Nzc4NDE5MSAxNzgxOTgwOTg4IDQ2NjEzOTMxNSA0MDU4ODg0Njc0IDMwNjQ0NjA2MTcgMTI2ODExNjAyOCA4MDgxMjg0MzkgMjkyNTk5NDcxNCAzMzk2MzAwNDggMTA4NjI5NTA0OSAxMTAyNzQzNTA2IDIwODExOTQ0NzQgMTQwNzM4Njk3OSAzMzc2Nzg5MzUgMzI3ODk2MDY1IDMyNDkwNDcwNjAgNDEyNTExMjAwMyAyMTE0MDgzNDQxIDI5OTI4NzMxODYgMjMwNjA1MTg1OSA2NjQ3MDE4MDEgMjUxNzA1Mzk4NiAzOTE4MTI4OTgyIDUyODk5MDc4NCAxNzMyNTAyNTIwIDE1MTk5MjM5NTggMzM5MDI2MjA2MSAyMTk5NTM3NjMzIDIyMzIxNDU5OTUgMjMyMjIyODg3NCAzMTMwMDgwMzU4IDcyNzM0MTEwNyAxNjMxMzkzNzU5IDE1NzYxNTU0NzkgMjMyNTMyNTIzMiAyMjg0MzY0Mjg1IDIwMjQ5NTYyNTUgMTcxMjE3NTMyMyAyNzA2MTUxNjI0IDEwOTIwODE4NSAzNTk4MzI0NTMgNjcyNDM0NDk4IDE3MTczMzY1MzIgMjc2OTU4OTMyIDQxMTExNTg4OTYgMTY3MDgwNzM0MCAxMjUyNjcyMTQzIDEyODYzNTcyMDUgMjc1OTAwMjIyOCAxOTQ4NDgyOTExIDM4NTMxMDg0NTYgNDI0MTA2MTAwMiAyMjU4MDYyMzA1IDM5MDA4NjE1NDAgNDA2NDg2MzM1MyAxMzQ4MzAwNTM3IDE1Nzc1NTAwMDAgMTMwMzA4NDk3NCAzMTgzOTM3NTA5IDIzNjA0Mzc3NCAxNzA0OTExODkwIDE2MTUwMTM3MjQgOTc0ODAyMzE5IDE5MjU5MTQ5NTQgMjM0ODk1OTM1MSAzMTg0MzU1ODUwIDM2OTE3MTk3OCAxMzcyMjA2MjkzIDE1NTc2NzkyNDAgMTE3NTA5NDI1OCAxNjUwOTg5NzY1IDQxMDYzMTg5MDcgMzg0MjgyMjkxMiAxMTQxOTU1NjA4IDE4OTc4NzEzMDMgMTY4NzQxODg4OSAxMDYyNDMwOTIgMjA4Nzg0MjAwMSAxNzUzNDM2OTI2IDE1NDY4NjAxNzAgMzkyOTEzOTM5OSA2ODE0MjU0NzcgMjczMTMwNTc3MSAzNjU5NDEzNzkyIDIzOTAwNTA0OTkgMTM4MjYyNjMzMCAyNzAzMjk1MTMzIDE2NTcxNTE2NjYgMTc1NDI0NzgzMSAxMzY1MDk3NTExIDE4OTA5NDc1NzYgMjg5NTEwODQwOCAyMDIzMTQ1MTgyIDIzNDQwNjg2MDAgMTc2MzUyNjMwNCA0MjU3MjIwNDg0IDE1OTA3MDI3NSAyMDg5Njg0NTkyIDk4NzU3MzM5OSAyMTg1MjU4OTAyIDUzNDk3NTA4MCAyMDUxNTMzODM3IDEwNzQxNzEzMzAgMzkwNTQ0MDI0NiAxNzQ5ODMwNTc3IDEyODIwODQyMTcgMTg1NzY1MzA5MCAyMTM3OTI3NzA2IDQwNzYxMDUzOTUgNDAzNDY0OTIxMyAxNDk4Mzc3NDEyIDM1Mzg4MzU0MDAgMzQ4MjQwNDY0NyAzMzExMzU5NTU3IDMzNTAzNjQzMzYgMTQ5NjQyMTA0MiAxMDU2Mjg3OTIzIDIzNjk2NDYyNjAgNzU3NjM0Mjc2IDM0MDQ1MTQwNTkgMjAzMDA1ODMwNCAzODg1MjQ3MTY2IDI0MDc0NjU2NDMgNDA5NjIyOTA2NCAyNDQ5MjU0OTYzIDU4ODkzMDkzMCAyODYyMTk3NTI4IDgyMDQ3MjkyOSAxMTY2OTgyMTMgMjYwMjIzOTQgMjg3MTA1NzMyIDQyMTI4OTA3OSAzNTA1MjAzOTkxIDQxNDY4MzY0ODkgMTk5MDU4MjAwIDQyNjE5MzM0NzEgMzgzNjkyMzgyOCAzNDUxMjQ5NTAwIDM0MDY0MDA2NzcgMzk1NTMxNDMzIDMyNTU2ODczODUgMzczMjQ4NjQ0NyAzMzE1NjA0MzYyIDg2NjUyOTA4NCAzOTMzOTc4NTg4IDI2MTc1MzY0NCAxOTc4OTg3OTE4IDI4ODUxMTgzNjYgNDA4MzQ5MjgwMCAyMjA2NTM0NjkyIDE5NDY2OTAxMDAgMTgyODExNzc5MiAyOTU4ODg5NTcgOTYwMDU0ODU4IDE1ODEwMTI1ODggMzUwNzA1NjQ0NCA2MDM2MjY1MTkgMTIwODU0MjU0NCAyNjc1MDM2OTc5IDExNDUzNDMxMjQgMTM4MTY0MzUyOSAyNTM2NTE5MDE3IDIxMDI2MTg4MSAxNDkxNjgyNTYwIDk1NjA4OTI1NyAxNzEyMTY5OTcwIDI0MTE5NjkzMTcgMTU4NDQ3Mjc0IDEyNjI3NTA4MTAgMzYwNjIyMTg3MiA4MTIxNzIzOTMgMzU3ODgzNDg3MiAxNTA4MjUyMzUgMjEzNTU3NDUyIDE1MzEwOTI0MjYgMjYyMTg5MTk0MiAyNDI2ODEyODQgMTA2MzcyNTk4OSAxMjcwNDMxNzkgOTMzOTczMTMwIDQwNjUzOTgyMTQgMTk5MjAyMzMxMCAzMjM1MTM1Mjk3IDEwMTMyNzA2MjUgMzk5ODc3NTQ1MyAxNDM5MDQ5MTM1IDEzNjA1OTIxMjggMzA0MTQxODE3NiAyNTY2MTk0OTE4IDM2NTA2MDAyNzMgMzUzMDMzMTMyMCAzNjE0ODA3NDIgMjcxOTIxNTcxMCAyMDExMzMgNDkzMjYwNzA3IDc2ODIwNjc3MCAyMzQwNzI3OTY2IDI0ODI3Mzg5MjkgMjg2MzYzNTAxMyAyMDkzNTM4OTIyIDQwODAyNzI1NDMgMzEyNDg0MjIyOSAzNDE4ODM5MDA1IDU4Mjg0Mjg4MSAzNzA4OTg4NjI1IDIyOTE3MDAyOTUgMjc5MTAyMzUyNyAzMjU4ODM0NTY4IDIwMTgzOTAzNDMgODA3NTI4NDYzIDM0NzI0NjM0NTMgNDI2OTk3NDE1MyA0MjMyODM4MTE4IDMwMDM4Mzg0MTQgNDczNDgzNTA2IDQ3OTEyMDExMyAzODg0NDUyNzQ5IDE2MDYyNTgzMDMgMTE0OTAxOTk1MiA0MTc3NDA4MjA4IDI2NTM4OTI1MzkgNTM5MjU0OTggNDA3MjY2MzQ1NiAyNzA0NTY2NzM0IDI1OTgzNjU5NDggMjIxNTM1NTgzMSA5NDMyNzU3NTUgMjkxMzkwMDM0NiAzMDc1OTA4MjUyIDM0MzEzODA5NTUgNDAzMzk0NjA0NiAyNjYwNDA4NTYgMjQyMjQ5OTg0IDQxMjQ0MTU2MjUgMjY5NDQ2MzQ4NCAzNTA3MjM2NTQ1IDUwNTU2MjY0NiAxODM5Mjk2MDU5IDU0MTI5Njc1MiAzNjUyNzY1MTE5IDIxNDUwOTk5NjQgNDY3MDQ2NjkwIDUyNDMxODIwNCAxNTY4MDQxNDcxIDEyODE1NDAyOTggMzg1MzQ5NzUxNiAxNzkxODE2MDk3IDM5NTE2ODcwOTUgMTc3NTcxNTc0MCA0Mjc0NTc5MzAgMTA5NTI2Mjk4OCAyOTUxNDgyMDQ0IDc1NjE0OTM5NCAxODczNDQzMTI3IDE2Mzc0NjQ1NTYgMzYxNzY2NTMxMiAxOTEwMDU0NzY3IDE2MTg4MjI2NjMgMjM4MzQwMzAwOCAxMTg5NTYzNTAxIDE3NDY1OTY5MjggMjU2OTAyMTUxNCA0MjI5OTc1MTggNDI1NzI3ODc2NSA4MjU5MTE1MDIgMTk0MjE5ODUxMSA0MDE4NDUxODU2IDIxMzk5MDE4NjYgMzEzMTc2NTUzOSAzMDEwODI3OTU0IDQzMzYyODQ0NiAxMzE5NjQ2MzQxIDczOTQ2NjY5MiAxOTc4NDcwOSAxNTgxNTU2OTA3IDYzNTA0MDQ1MyAxMzYzODgzNjI5IDE2MDY0MzY0MzMgMTQ4NzcwMzg3OCA4NjczMzgxNzAgNTA1OTQ0MDkwIDQyMTgyNTI3OTUgMTY3NDQ1MjExNCAyMDQwNTkxMDM0IDI3NzY4MTU3NDcgMjg1MjM1MzQ0MiAyNzYzMDAwMjg2IDExMzY1NjY2NjcgMTYzNDYzNzYxOCAxMTczNDE4OTc2IDU2NTg3OTQzMSAyNTA0ODc2MDM4IDI2ODQ2ODQxMjAgNDI2Nzc3NDUzNSAyMTI5NTY2MzYyIDE2NjI4NDE4MzggNDExMDUxNTM5IDEyOTk0NjA2ODAgMzkyMTY2ODUwMyAzMjE3MjUxNjMxIDMxNzM3Njc1NjUgMTYyMTMxOTIyNCA3NjIyOTQwOTEgNTUyMzU3MjIyIDI1NTc0ODUzMjYgNDkwNzY0MTczIDM0MTAyNzI2MjcgMjUyNTUzNzAyNyAxNjgwNTI5OTc3IDE4ODIyMzk4MSAzODk1NTg1MTExIDU4NDc3ODc0NyA0MTE3MTYxNjk1IDUzMDA3MDEzIDE5ODU1MDU3NzkgNDI4MTQ4NzQ0NSAzNzIzNTc1NzggMjg2MTY1NjIwNyAxOTQ5MDg3MzU5IDM5MDQ4NjAwNTMgMjYwNjI1NTYzMCAzMTg2NTcxNDIxIDI1MDAyOTI1MDkgMzg5MjU4NTExOCA0MDAwNDkzMjY5IDIxOTIxNDcwMjcgNDI5MjEzNDEwNyAxMzExODUxMjk1IDMwMjI4MTc5ODIgMTE2NzQyNjc3IDE1ODY4MDkxMzkgMjI5NDA5NzA2MSAyNjgxMDY3MjE1IDI0MTIwMTcxMDIgNjA2MTE5Nzg2IDEwNjk0MDYwOSAyOTQ0NDMzOTQxIDc5NDE5NTIwNCAzNTcwODgwNjQ2IDIxOTIzNzI1ODggNzQ2ODQyNzE0IDIyOTcxNDM2NzEgMzgzNDcyODk5MSAxNzQ1NzkyMyA0MDQ2MTA1ODk1IDM5MDAzNDc2OTMgMzQ2Mzc0MDE5MiAzOTU2MjMyNjUwIDY4MDgxNDgxIDk3NDEyNzgxOCAzMzEwNjk1ODU2IDE4ODMyNDE2MzAgMjIxMDk3MjYwMyAzNTczNjkzMTgyIDI0ODkxNjcwNTkgMjQxODU0Mjk2OCAxMjA4NTA3MjYgNDE2ODU0NTI4MyAxNTM1MjY0MjYyIDI5NTM4NjM2MjYgMTE5NTU0ODE0NCAzMjQ0NjQxMDU0IDM0MjE3NzYyNTEgMzgyMTkwMTQxMSAyMTg0NTU4MDYwIDIxMzE2OTk0NDMgMTcwMTgzMTA0OCAzNjgzOTk1MTY0IDMyMTM4NDczNzEgMjUxNTUzNTAyIDIyNzMxNDIxODQgMjYwNTExNzgxIDI5NzM0NTU3ODkgMzY0MTQ3MjgwMCAxNDAzMTA4ODM3IDQwMDQxODAyMzUgMjYxMTM3MjYwOCA0MjExNjExNjgzIDIyODEzNTA4NDIgNDE2MzEyNTQyNyAxMzcxMjU2NzE2IDg5MTYwOTUzNCAxNDM1MDc0NzYgMzk2Mzg0NjE0NyAzMzM5NjMwNjI0IDkxMTEwNjgwMCAxNDE2NTkyMDgyIDE0ODQ0ODExMjIgMTY5NTE0MTQyNyAzNjE2ODczOTUxIDIwNzc0NTk5NTQgOTg2MTc5MDc4IDQyNDY3OTY0MjIgMTc4OTE0ODA2NiAxNTQ2MzA2NjgxIDEwNjE5MjgzMjMgNDA5MTY2NjkwNyAxNzI2MTMzMzQ5IDE0NjE5MDc1NCAxNzU0Mzg0NjY1IDM4NTUyMzMxOTIgMTQzNDMwMjYzMiAxNTI3NDY3NDg3IDMyNDEzODAwNDEgMzI3MjU0NTI1NCA3NjkzNTM4NzAgMTE4MTEwNjIzNiA0MjM0MzQ2MzEyIDc1MDQ0Mzk4MyAxODYwMTA1OTYgMjQ0MzUwNzUwMiAyNzc4NzczOTkgMzYzOTI4OTU1MSAyMzUwNzQyNzEzIDE1NTE4NDYxNDkgMTUxNzkyODE0NyAyODMzNTU4ODEwIDM3MzMwNzEwMzMgMzg5Mzc1ODM3MiAzMjU5MjI4NTQgMTkxMDY1ODg4MiAzMDUwNTg4ODUyIDczMzQwNTcxNiAzMTY1NjQ0ODQzIDk2OTExNjUzMyAyNjE2ODk0NTc4IDE3OTQyOTg0OTAgMzM4NTcxMjU5NCAzNjQzMjUwNTcgNTI1OTUwODM0IDM4NjY0MDU5NjAgMzA1ODI0NTM1MCAzNDU4NDczNjQgMTg3Nzc5MDUwMSAzMTc1MzUwMTUwIDMxNTcwOTU3ODMgMTY2OTY4NTI5MyAzNTc4NDI5MzYxIDI1OTM2OTUxMjAgMzQ1MzEyMjI4OSA3NzY4OTI4ODIgNDEwMzc1Mjc1NSAxNzYwOTM2MjY2IDM2NjQ5OTYzMzggMTk3NTQ1MDk5MyAzNjI0NTk1MzQxIDIzMzg2ODU3OTYgNDA2MjczNjI4NSAzODA4NTMyOTE4IDQyMDgzNjI0NDIgNjk4ODQ3NjYzIDM5NTcwNzI3NTAgMzUwMjkyMDAzNyAzODc4NDAxNDQzIDI2NTM3NDM0MiAzNDkxNjM1MDEzIDI2NDI5ODg4MDYgMzA2ODA1NjMxNyAzMTg0MzEwMjc3IDE4MTkzNjg0OTQgMzQyODI4ODUwMyA1MDI2NzU4ODkgMzYwNDcwODkzMSAyOTM0NTA5OTk5IDE5MjIxNTU4NDQgMTM3ODg1MjU1MSAyMTU1MDEzNDM3IDE4MTg4NzEyODAgMjQyMzYyMDM1NSAyMzYwMzI5NjcyIDEzNDg5NjM3MzAgMTAyOTAyMzc4IDU5MDY1OTMyMiAyMTQ4NzU0NzIxIDI0MTc1NDczOSA4OTgwMTE4NjAgMzg3NjQ0MTQ3OCA3MjE1NDExMDEgMzg3Mzk2NzAxNCA1MzU4Njg4ODggMTY5NTYwNTIxMCAxNjE3NTMxNzUwIDM4NTU5MTgzOSAyNDExNzc4NjA5IDM2NTU0OTgyOTUgMjg2MzY4MzkyNiAxMTcwNTc4ODgxIDExMTk4MjYwODggMjYwMDY0NTY0NSAyMzU3MTg5NDIgMjA1MDE3MTU2NyAzNDMxMDg2NjIxIDI4MTU4MjI4NzkgMjA1NzY0Nzg3NSAzNjUzMzc5OTMgMjkwNDY0ODc3IDEzMDA0ODM0NjkgMTA2MDQ1NzA3MSAxMzcwODQ5NzU2IDM2MTM5MjQzIDc0MjIxODU4MSAyNjI0ODgzOTE4IDEzMzE5NDQ3NyAyNzUwMjIzMTY5IDI2NDE3MTQxNzYgNDIyMTg0MjI2MCAyNDk1ODcwNjExIDk4NTE1MDUyNiAyNjk5NzI3MjU3IDc4MjQwNjMyNCAzOTk4NzU1MTg0IDE1NjQzMzYxMTQgMTI2ODQzOTY0NiAzMTU5MzYyMTAyIDQxNTA2OTg5OTcgMTg4MjkyODU1NyAzOTg5OTI5MTk0IDg1NTE1MDI0MyA3MzczNzc5NDIgNDIwMjI2ODA5MCAxNjg0MTAxNjMgMTgyNzQwNzM3NCAyNjY2NzA5MjA3IDE2NTAwMzY1NjIgMjA2ODQ3MzQwNiAxOTY2NDg4NDQgOTk0MDI2MTE1IDE4NDgyNzY4OTQgMTExMzc0MCAyNzk2MTE4MDgzIDkwODc5MTQ4OSAzNjQzNTE2ODQ2IDM2NzA1MDgwMjEgOTAwNjg4ODk1IDQ1MjY0MDMxOCAyNzk0NDM0NjkxIDE4NDkzNzA1MyAzMTE3MjE0ODkzIDI1Njc5MzU3MTUgNDE3NTc5MDE5OCAyNjA1MDkzODAxIDI2OTQzMzg0NjMgMzE2MTI2MDg2NSA0NjQzMDY4ODYgNTUwOTczMzY0IDM4MTE4NzM2NDcgMzg5MDAwNjI5MCAzMDA3ODIyOTQ3IDM5MTk2NDYxODAgMjMyNzg4NTQyOSAyNjU4OTM5NzcgMzE0NDczMzY2MCAyMjY4MjYwMzcg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NTU1MjM2MzIgMzI3MzcyNjM5IDI3NjMwMDIyOTUgMzU3Mzk1NjYyIDMzNjkyNjIwNDAgMjUwMTkzNDE3NSAxMjk3MjIzMjU1IDE5OTYwMTY3NzggMjA0MDQ5MjE3NyAzOTM0NDI2ODA2IDgyNDc0NDY2OSAxMDE4ODQ5MDM4IDEyMzExNzYwNzcgMTMyMzU5MDc3MCAyNTAxNjE4NjMzIDIyNDc1MjQxNzQgMzMxNjY4OTAzOCA5NTI5MTI2MjQgMzM0Njg3NzMzMyAzNzU2MDUzODExIDMwMjI1ODc0NDAgMjMzMTI1ODkxMiAyMTkyOTIxOTAwIDE3MjMxMjE0OTMgNDg1Njk0NjYyIDExNzk2NTIwNTkgMzg2OTIxNjI4MyAyNTMwMjYzNTcgMjMxMTA4NDQ5MSAyNDQ4MDgyNzkzIDMwODUzMjE2ODQgMTAzMjYxODk0NiAzMDkwOTMxNDg1IDM1MDIyMjc0MTggMzM3OTY0NDUzNyA4MTUxNzI4IDIxMDQxMDEzOTcgMzUxMTI5MTI3MyAxMzk0ODAxMzYxIDEyNzQzOTc3OTIgMjk3MjY0MDY0MyAzODA0OTg5MDgwIDQxOTI3ODEzMjIgMTIyNzc1OTY3OCA3MDg0MjMxMDcgMTc4NjYzNjMwOCAyODgyMjUxODE5IDI1MTYwODE4NDAgMjQ1NTc3MTI4MSAzODUzNTI3ODM4IDM5OTc5NTI0NjEgMzY4Njc5NjIxMSAzMTkyNzcyMzA5IDQxMzIxNzM5NTUgMjgzOTkzNDk5IDIyMDgzNDA4OTYgNDAyNTk4OTYwMiA3NjAyNDA0MyAyMDMyOTUyMjkxIDM0Njk4ODM1MDYgODE2ODY0MTcyIDM3OTA3ODkzNTUgMTUzNTA3NzQxNCAxNzI2OTM0NTA1IDM2NDQ2MDI0NSAxOTk2NDcwOTIyIDgyMzU4MzE3OCAzMjYxMDM4MzcwIDM1MzU4MzQ5MzUgOTc4MTQ1MTYxIDI0ODU0NzU4NjIgMTEwODEwOTYxOSAyMjQ5NjkyNTEgMTA3NDU5ODQ2MSA5MTQ5MDYzMDggNDE3NDM2NTgwNiAxNTQ0NDA0OTQ1IDE2OTE0NzI4OTggMTAyNTk5ODEyOSAzNDg3MTAwNTA4IDc2NzY1NDQ2NCAxMjczNDI0NDQ0IDU4NTQ3MDM5MyAyNTg0OTY3MDA4IDQyMzczMDQxOTkgMzM2Mjc4MzI3NiAxNTk3MjI1MzA0IDQ1NjUzNzgxOSA5Nzc2NTYyMTkgMTk5ODk5NjQxMSAyNTI5MDI0ODI3IDI0MjQ3OTU3MzQgNDA5NTc1NzMyMiAyMTQyOTEwMTM0IDMyMDM0NTg4MzcgMTQyODAyMTI2IDM3NTA2MzMwMTQgMjAwNTc1MDU5OSAyNDYxMzA3OTk5IDk0MjE3NDM2NiAzNzcyMzg1NzM3IDM0MDc5Mjk0NDMgMjQwNTA4MDQyIDE5NTc3NDQ4MzQgMTYyMTA5OTc1MSAyOTc0NzI4NTE3IDM4NDE0NjIwOTggMTkwNTA5MjMxOCAzNjA4ODkwOTMwIDM1NzAxNDI3OTYgMTU5OTM4MTQ5NyAyMjkzOTc1Njc2IDI0MDc1NTY5NTAgMzI0MzkzODQzNSA3MTgwMTYxOTcgMTI2MjA1OTc4OSA1MTUwMzAwMzcgMTExMTgxMjk5NSAyMzEyMDI5ODI0IDE5MzYzMDM1MSA3OTg3NDY1MTUgMzk3Nzg1MDc2MiAyMTA4NDQzMzQwIDM4ODYyNTc1NyAyODk1Mzg1MjA0IDIxNTY5MTU2MzIgMzk0MDIwNDU4OSAzNTQyNzU3NTcwIDMxNDg3ODA0MTAgMzA5NzQyNjg1NSAyNjk2MjU2MTIwIDI3NTQyMDg3MDUgMTU1NTkxODg2OCAzNTYwMTEwNDAwIDM4MTM2MzM5MTMgMzQ0NTgwNjUyMSAxMjAyNzgwODMyIDMyNDg4NDQ3NTUgMjI2Mjg5Mzk0MSAxNzM1NjA3MzQwIDMzMTk1ODU4OTMgMTc1ODkyODM1NSA3NTczMTc1NjAgMzY1NDE3MDU0NiAyMzM4OTM0NTk4IDI1Njg2OTQzMDMgMzQyMzMwMzQ2MCAyMDgyMzU0NTY3IDQwMDc5MDIzMCAyNTkwODA4NDM1IDMwNTg4NjAwNzEgMzk1NTE1MDQ3IDU5NDgwNDExMyAxOTY2MDk2Mzg4IDE5Njc1NTM0NjggMTI4NDIzNTY5MiAzNDQzNzczMTUxIDExMTYzNTk4MDkgMzcyMTYxMzI3MSAyOTc3NTkyMjQzIDM2ODY3NDg0NyAyNjMyODA5MTAzIDY5NjAyMzYzMyAyMzAzNDQ4Mjk3IDM5ODYwMjUzMDggMTU1Nzk3NjcgMzkzNTMyODE4OCA4MTM4MzQ4OTMgMTUzMjY0OTIxNCAyODg3NzU1NDg2IDE5NTU3OTk4MTMgMjg4NDE5ODA5MCAxNTQxMzk2NjkgMTc3NjQ3MTc5MiAzNzcyMDg1MzA3IDI2Mjg3NzE3NjkgMTIyMTIzMzc0MSAzMTA5MDc3MTgwIDI2MDM0MzA5NzggMjY1NTEwMTQ4NSA0MDA1NjE0NTAzIDM0MTk0NDQ5OTQgODEyNTU4OTcwIDEzNjY1NjMwOTEgMzYwNTcxMjk1MyA1OTQ1ODA2MDAgNDEzMjQ1Nzg4IDMzMDE0NTAyNDkgNzc4MDQyNSAxMzExNzYxNjUzIDI4NTA4NDUwNjcgMjMzMjY4OTUzOSAxMjI5Nzg4MzE2IDI1MDc1MzQzNDMgMTcyMDc2NDc4NSAxMzE0NTY2MTcwIDk2ODUyMzYwMCA0MjA3NTkzMDQ1IDM1OTAzMzE4NjggMTEwNDU5OTc4OSA4MDg0MzQ3NCAxNDc5MjA4NTcgMzc1NjI2OTY0OCAyMTA3MTYyNTg2IDQyNTY2MDEzMDYgMjIxMjg4NTg4OSA4NjgwNjc2MDggMjMyNzc2MzE0IDQxNDgxNTM5NTAgMTQzODY5MTU1MiA1MDYyNjAxOTcgOTQzNTM3NTYxIDMxODY0OTc2MjMgMzg3NDEzMTEzOSAzMjY4MDE3ODM0IDIzMDQ4NzcxMjQgNDIwNTEzNTIzIDE5NzY5NTk4MDIgNDQzNjYzNDUwIDMwNjY0MDM1NDggMjM0MDc5NTAzMiAyMTAyNjc4OTUyIDM4MjgyODE1MDYgMjY2OTU3NjIyIDI4MTEyNTQ3MTMgNjY0MDcyNDE5IDE0Mzk2Mjg2MTIgMjkzNTc3OTc1NyAyNzM5MDI3ODg5IDQ3NzI3NzYwMiAxNzE2NjM0NDM1IDM0MjE1NDYyNTggMjI3ODEwNzc2NiAyMjE2MjIwODU1IDMwMTA0MDk5NzMgMzg5NDUwMjczIDc4MTc5NTQzMyAyMDAyNzg1ODY4IDc2MTk0ODU3NyAzMTg1MDU1ODU4IDQ4NDE2NTYxOCAxNzgxNjMzMTQyIDMzMjQ1NDk1MTkgMTQ2MDQ4OTIwMCAyOTkzNzU1ODAzIDMzMjM5MzQ2MjUgMjY1MzMyNjE2NCAxNDM3NjIyODY3IDMwNzc2ODM4NTEgNDE0Nzg0NzUyOCAzNDcxODM3MDY4IDMzOTc0MDQyNTAgMzUxMDgwOTUxMCAzMDM4NjA1OTc2IDk0Njg4NzQyOCAzNzQxMTkzOTY2IDI1NTE4MjQ1MDEgMTIwMDk4OTk1MSA2MTc0MjY5NTQgMTk1NzI5ODM4IDMxNTY2MTk2MTIgMzc3NDQ3OTk4MyAzODk5Nzk5ODQ0IDQyMDc5NTI1OTkgMTQ1MDIxNzcyNCAxNjU3MjIzNTgxIDMxNjU5NDI1NjQgMTgzMTk0Mzk1OCA5MzgyNzExMjUgMzg4ODc0NDczMiAxMzcyNTkwMDg2IDI3OTY1NDQ5NTggMzE3MTc1NzYzOSA0MTQ1ODk0Mzg4IDMyNzQzNDk5NzAgMTU2MjI2NTEwOSAxNTQ3OTAxNDE1IDExNjg3NjY2MTcgMzI5ODE0Mzk1OCA4NjEyMTg5MjUgNjc4NTYwMDM1IDEyMDQ5MDA5NjMgMzM3MDkzNTE0OSAxMTg5MjA1ODM2IDEzODkzNDUzMjIgMzYyNTc4NjUwNiAyMzg1MTczMTc1IDM3NDY2MDcyNTMgNDAyMzgxMjc5NCAzNzUyMjU4OTI5IDM2MjU5OTQ5NjggMjQxMjEzNjMwNCAyOTA4MzIyMjAzIDQwMTI5MDkyIDE4NTI0NjI1MTUgMTM4OTA3NjY2MCAyNDc0MTIzMjAzIDY3OTU4ODUyMSAxMDg4ODM3NDUxIDIyMDIwNTQ0MTIgMzAwOTI3NzA1OCAzOTA3OTkyMDA1IDE3NTU3MzQ5NCAzNTgzNTMzOTcxIDMzOTQ0ODY0OTkgMjc3NDkzOTM5MSA5NzYxNzQxMDkgMjk4NzYzNzg2OSAyMzIyNTg4ODc3IDE5NzM4MzkyMDIgMzE1MDM2Mjk4MSAzMjkzNjgyNjM3IDExNzk3NDE4MDggMTE0MDk4NjcxMyAxMDAxMzY4Mjg2IDEwOTg3NTU5NjQgMzE3MjY3NzQ5MyA0MTk3MTUxOTAzIDE0MDAyODIzNDAgMzkzOTA0NzI2MCA5NTQ4Mzg1OTIgODEyMTY1MjQzIDI1MDcwODQ2MDIgMjgzNzE3MzQ3MSAzMTQ2NzE3NTExIDIxNjQ3NTI5MDggMTc2MTU5MTcxMCAxMzQyNDAxNzEyIDI2NDM0NzkyNzMgMzY4NDI4NjUwNyA0MDc1MTAyNDc3IDI5NzI0MjM1OSA0NjcyNTQzMjEgMTUzMDQ2ODI2OSAxNjI1NjI1NDkyIDI3MDI0Mjk4OCA5NzY1NzE5MTggMzY3MjAzODU4NiAyMTI4ODc5MDg0IDE1MzY0MDU0MiAxMDUxMDM3MzI5IDMzMzg3MjUxNzEgMTA0ODMxOTA5OSAxNTk0MzQ3NTg1IDE4MDU0MDg4NDggMjU3OTM3MzYwMSA4NjA4OTM2MjYgMTI0MTQ4NzAzIDk3MTk1NTA4OSAxNDMxMjA4MDUyIDMyNzQyMTI1NzkgMjc3ODAwMDM1MCAzMzkxMzUyNzMwIDkxNTkyMDk4NCA0MDc3MjA4OTYgMjY4NjQ2NDk5NCAzNjkwNTEzODQ1IDQyMjE3NjE0MzkgMzg4Mjk3OTc2NSA0MjU5NjQyNTQ1IDMzMDQyNTEyODkgNDQ5MjYyNjY1IDI3MTM5NTM4MzEgODQ1MTE5NjIyIDE1NDgzOTEyNjkgMjUzMTg2MDE0MCA3MTIxNjc2NDYgMjA0MzgzMDExIDI2NjU5ODIyOTcgMjcxOTg2MDQ2NyA3MTAxMTg3NDYgMTI4OTQ5MDgzNSAxNjM4OTI2MzQyIDMyNzUyODM3OSA0MTE5MDQ1MDk2IDkxNDU5ODQ1NSAxODYxMTA2ODEzIDI0MzU0OTY0NCA0NDQyMDQ3NzEgMjY0OTYwOTQzNCA4MTU2NjY1NzQgNDA5NTM2NTQ1NiAzMzAxODE2Mjg4IDI3NjQzNzg1NzYgMjY0MTkzNjI5MyA0MTgwNTE4MzE0IDkyMzU5NDQxMSAxNjgyNzg0OTA2IDEwMjY2NjM2OTYgMzc5NzE4MTY2OCAxMzk5ODMxNzA1IDM2NzI1MDcwOTYgMjgzMDU5ODE4MSAxNDA5OTM5NDY3IDE1Njc0NzA3NzYgMTU5NDE3ODQ1OCAyNDI4MzgwMTMxIDExNzY5NTA5MjAgMjEyNDQxNTQwNSAxNzE2NDk1OTgzIDM2MjYxNTU5NTIgNjY5OTE4MTMgMjg2OTM1ODQ0MCAxODg0MzE4OTA1IDYxMTY3NDUyOCAyOTE1MDczNTgxIDEyMTExMDk5MDggMzQ2MDc1Mjc5MiAyMTM4MDMxMjMzIDM0MzMxOTQyNzcgMTMzMzYxOTAxMSA3MTk5NjQ0NTEgMTI4NzYwNTA4NSAxMTM3NDg4ODY4IDIyMjg1MDQyNjIgMjM0MzY2NzE3OSAzMDIyNDMyMDkxIDUzMzE1MjgyOCAyODU2OTk2NDQ3IDEzNjI2MzIzOTkgMjE3MzUzNzkzOSAzNjI4ODE3NTU5IDEyNjc4OTI1NTMgNDIxNDAwMzY0NyAxNjQ4MTEzMzk1IDMzNzQ1MDg5NTUgNTU5OTkxMzEgMjY4NDQ0MjQ3NSAxODc2NTg0MTAxIDQxNjUxMjU5MjggMzMxNDgyNzQ4OSAxMzQzMTM5Mjc1IDMwMTc5NTk1ODQgMTk1MDgyOTExMCAyMTE0Mzk5MDA1IDM1NDE4MDAwNDQgNDE0NzUxODgzOCAzNTM1ODgzMzkxIDIzMzI0ODkzNTkgMTE2MTEzNTcxIDIzNDQ4ODYxOTQgMzE2Mzc1ODE4NCAxMjU5NTI3OTYyIDUwMDY0NzUgMzI1Nzc3MDAgOTg5NTI3MjE2IDk4OTk0NDI5MyA0Mjg2NjIyNzUyIDM1NzEzMDA2OTggMjYzNjI5Mzc4IDg2NjY2ODkzNyAzNTc0NjI4MTQ4IDI5MzE3MTg2NjAgNTAyNDQ4NzIxIDMzODc4NzY5NjcgNDI1MDk1NjgwMSAzMzAwMTQ5NjUgMzMxMzQ3NTc1MCAyODM1ODkzNTY1IDMwMzg2MDgyMDggMTM4MTQxNzExMCA0MDc5MTQ4MjI2IDg0MjcyNTU2NCAxMDkyNTY1MzEyIDM4ODI4MjA5NTMgODYyODI4NTI5IDI2NjA5OTg2NzAgMTg5MjcxMTkzOCAyOTExMTIzOTk3IDI4MDExMjA2NDYgMjQxNjY3ODg4NyA0MjQ2MzYxOTczIDI2MDQ1MjI2NTEgMTE4MTI0MzgzNyAyMjg4MDAyNzc3IDMwMTU3NzQ4ODcgMjQxMzE4Njc3OCAzOTcwMjQ0NDM0IDUxMTA1NjQxMCAyNTgwMjI1NjI5IDIyNzA0NjMzMzAgNDQ5NjU4NDQ0IDI4Njg3ODI3NCAyODU1NTQ5NTU1IDM4NTA2MTQzMDkgNDIxMjU3Mzc4OCAyNzQyOTkzODYwIDE2MTAxOTYxMiAzMjQ3MzEyNDEzIDM5ODE2MTQ0NjQgMjY4OTU5Nzg5NCAyNzI3NzQ5MjI3IDQ0NDgzOTI1OSAyMjM5NDQ0NzE4IDIzMDc0ODkyOTAgMjI1NDU2NDUxNSAyMjcyNTY2NDMxIDc3OTk5NDExMCAxMjgyNDcxMDUwIDEyMTMzOTIwODYgMjM1Mjg2Mzk2NCAzNDk3MTg3MzA2IDE0NzQ5NDQwNjcgMzUwNTAxMzcxNiAyNDYxNTM1MzQ4IDM5MzQ2MTAzNjIgMzUwMzQ3MjEyOSAzMDk0MzIzNTU1IDMwMDgzNjYyNjEgNTEwNjk4OTA3IDMzOTA1ODM2NjYgNjc3Mzc2NjMgMzYwNTQ0MTczNCAyMTQ1NTYyMTI0IDM1Njg1NDYwMjkgMjMwNzM2ODA0IDI3MDg3MjA4MjAgMzQ4NDQwNTY3MyAyNzQ5NzgyMjUxIDMzODIxMDc4NzIgNDA4NjAyMjIwOCAzNjg2MTQyMjEwIDE4NjQyOTgyMDIgMjYyMzQ0MTYzNCAxNTMzNDk0MjcyIDY3NzE2MTI5NSA1NjQwMTg4MTkgMTY1ODAwNDEzMCAxODEwMTYxMjE4IDIwMjEzNjE5MiAyNjY4MzYzMzcyIDkyMTEyMTkxOCAzNzcxMDcxNjE5IDI1NzQ4MjQyNTEgMzE5Njg5NjAzOCAxNTE3NzE3MzMwIDI4NTcyNTE1NDcgMzk1MzE2NjU5MiAyOTI5OTE5ODE3IDY2MTcwODEwOCAzNjcxMzQyMDU3IDM1MDA5MTg1NyAyOTQzMjU5NzUzIDE0NDU1NDcxMzkgMzYyNjA2OTQ3MSAxODY1NzAzNjUwIDE5MjQ5MTA1MDMgMTc3NDgzNzAyNCA5MjcxNTc2NDYgMTA4MDc0OTUwMCAxNzg3NTM2MDAwIDI2NzY3MjM0NzAgMTE0NDU2NDQ1MCAxMTYyMDcwOTEzIDI1NTY2OTM5NjcgMzAyMjAxNzI4MiAyMTAyOTY0ODU0IDE3MjUwODgxNzcgMzU1NzgwNjE3NCA1Mjc0ODE5NjIgMTk2OTQ3NTUwMyAyMTAzOTAyOTg4IDE4NzAzMzA1ODEgMjA2MjU0MDA3MyAyMjc5MzI0MDY1IDM2NTg4NzM1OTEgMTgyMTU5MzczNyA4MjI1NTA4MzcgMjc0NjMxODA5MSAxMDk1ODMwMzI0IDQwNTUxMDcxNzEgMjUwNjM5NjY3NSAyNzMxNTkwNzgwIDIwMDE2NzI2MDIgNTgzMzgwNTA5IDE5MzU3MjM4NjEgMTQ1Njk1NTM5NSAxMTc3OTQ2OTIyIDE0NjQ4NjQwNSAyMDQ2MDMyNzY1IDE0NTEwNzA3MTQgNDk3NjcyMTk0IDI1NzcxMDgzMDYgMjE5NzkxMzM3MSA0MTg2NzgwMjQyIDE4MTU2MDE1MDYgODMxNzA4MjU6awAAtA4MAA==",
+      "oracle": {
+        "NOOP": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "FIRE": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "RIGHT": {
+          "deadline_frames": 1,
+          "safe_prefix_frames": -1,
+          "deadline_right_censored": false,
+          "safe_delays": [
+            1
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "LEFT": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            }
+          ],
+          "correct": false
+        },
+        "RIGHTFIRE": {
+          "deadline_frames": 1,
+          "safe_prefix_frames": -1,
+          "deadline_right_censored": false,
+          "safe_delays": [
+            1
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 5,
+              "score_delta": 25.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": false,
+              "aliens_killed": 0,
+              "score_delta": 0.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": true,
+              "lives_lost": 1,
+              "alien_killed": true,
+              "aliens_killed": 1,
+              "score_delta": 5.0
+            }
+          ],
+          "correct": false
+        },
+        "LEFTFIRE": {
+          "deadline_frames": 12,
+          "safe_prefix_frames": 12,
+          "deadline_right_censored": true,
+          "safe_delays": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "outcomes": [
+            {
+              "delay_frames": 0,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 1,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 2,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 3,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 4,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 5,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 6,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 7,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 8,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 9,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 10,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 11,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            },
+            {
+              "delay_frames": 12,
+              "life_lost": false,
+              "lives_lost": 0,
+              "alien_killed": true,
+              "aliens_killed": 2,
+              "score_delta": 15.0
+            }
+          ],
+          "correct": true
+        }
+      },
+      "decision": {
+        "action": "LEFT",
+        "confidence": 0.16666666666666666,
+        "latency_ms": 0.002959044650197029,
+        "raw_response": {
+          "action": "LEFT",
+          "confidence": 0.16666666666666666
+        },
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "errors_by_status": {},
+        "retries": 0,
+        "attempts": 1,
+        "fallback": false,
+        "timeout": false,
+        "invalid": false,
+        "served_model": "mock-random-v1",
+        "probabilities": null
+      },
+      "latency_frames": 1,
+      "ordinary_correct": false,
+      "deadline_correct": false
+    }
+  ]
+}
