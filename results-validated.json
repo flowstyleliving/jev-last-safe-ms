@@ -85,6 +85,61 @@
       "served_models": [
         "mock-random-v1"
       ]
+    },
+    {
+      "run_id": "mock-decider-2-0-2e457097",
+      "backend": "mock",
+      "role": "decider",
+      "seed": 2,
+      "episode": 0,
+      "score": 105.0,
+      "steps": 495,
+      "frames": 1977,
+      "lives_lost": 3,
+      "terminated": true,
+      "truncated": false,
+      "truncation_reason": null,
+      "model_calls": 495,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "latency_ms_p50": 0.0034580007195472717,
+      "latency_ms_p95": 0.007583340629935265,
+      "latency_ms_total": 1.9289625342935324,
+      "errors_by_status": {},
+      "retries": 0,
+      "fallback_actions": 0,
+      "mean_confidence": 0.1666666666666666,
+      "ordinary_accuracy": 0.46464646464646464,
+      "deadline_adjusted_accuracy": 0.2585858585858586,
+      "timeout_count": 0,
+      "invalid_output_count": 0,
+      "beyond_sweep_count": 0,
+      "cost_usd": 0.0,
+      "pricing_basis": {
+        "date": "2026-09-29",
+        "unit": "USD per million tokens",
+        "input": 0,
+        "output": 0,
+        "source": "local mock, no billable tokens"
+      },
+      "brier_score": 0.3375420875420876,
+      "calibration_bins": [
+        {
+          "lower": 0.1,
+          "count": 495,
+          "confidence": 0.1666666666666666,
+          "accuracy": 0.46464646464646464
+        }
+      ],
+      "ece": 0.297979797979798,
+      "mixed_safety_snapshots": 69,
+      "mixed_correctness_snapshots": 351,
+      "safe_action_labels": 2175,
+      "unsafe_action_labels": 795,
+      "trace": "artifacts/mock-decider-2-0-2e457097.jsonl",
+      "served_models": [
+        "mock-random-v1"
+      ]
     }
   ],
   "baseline": {
