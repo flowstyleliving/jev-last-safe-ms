@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "models": [
+    {
+      "role": "decider",
+      "provider": "mock",
+      "requested_model": "mock-random-v1",
+      "served_model": "mock-random-v1",
+      "sdk_package": "bench",
+      "sdk_version": "0.1.0"
+    }
+  ],
+  "config": {
+    "env_id": "ALE/SpaceInvaders-v5",
+    "frameskip": 4,
+    "repeat_action_probability": 0.25,
+    "full_action_space": false,
+    "max_num_frames_per_episode": 108000,
+    "obs_type": "ram",
+    "wrappers": [],
+    "decision_interval_steps": 1,
+    "state_encoding": "RAM bytes decoded to ship x, alien grid, bullets, shields, lives as JSON",
+    "ale_py_version": "0.12.1",
+    "gymnasium_version": "1.3.0",
+    "oracle_horizon_frames": 180,
+    "oracle_max_delay_frames": 12,
+    "oracle_delay_step_frames": 1,
+    "oracle_policy": "NOOP delay then hold action to common horizon",
+    "latency_policy": "offline counterfactual; online immediate action",
+    "fps": 60,
+    "beyond_sweep_policy": "conservatively fail deadline metric; report count"
+  },
+  "runs": [
+    {
+      "run_id": "mock-decider-1-0-440c5e30",
+      "backend": "mock",
+      "role": "decider",
+      "seed": 1,
+      "episode": 0,
+      "score": 60.0,
+      "steps": 484,
+      "frames": 1933,
+      "lives_lost": 3,
+      "terminated": true,
+      "truncated": false,
+      "truncation_reason": null,
+      "model_calls": 484,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "latency_ms_p50": 0.0034580007195472717,
+      "latency_ms_p95": 0.007292022928595543,
+      "latency_ms_total": 1.7994213849306107,
+      "errors_by_status": {},
+      "retries": 0,
+      "fallback_actions": 0,
+      "mean_confidence": 0.16666666666666666,
+      "ordinary_accuracy": 0.3347107438016529,
+      "deadline_adjusted_accuracy": 0.1962809917355372,
+      "timeout_count": 0,
+      "invalid_output_count": 0,
+      "beyond_sweep_count": 0,
+      "cost_usd": 0.0,
+      "pricing_basis": {
+        "date": "2026-09-29",
+        "unit": "USD per million tokens",
+        "input": 0,
+        "output": 0,
+        "source": "local mock, no billable tokens"
+      },
+      "brier_score": 0.2509182736455464,
+      "calibration_bins": [
+        {
+          "lower": 0.1,
+          "count": 484,
+          "confidence": 0.16666666666666666,
+          "accuracy": 0.3347107438016529
+        }
+      ],
+      "ece": 0.1680440771349862,
+      "mixed_safety_snapshots": 101,
+      "mixed_correctness_snapshots": 413,
+      "safe_action_labels": 2092,
+      "unsafe_action_labels": 812,
+      "trace": "artifacts/mock-decider-1-0-440c5e30.jsonl",
+      "served_models": [
+        "mock-random-v1"
+      ]
+    }
+  ],
+  "baseline": {
+    "model": "claude-haiku-4-5",
+    "runs": []
+  }
+}
