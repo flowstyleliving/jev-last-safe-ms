@@ -8,6 +8,14 @@
       "served_model": "jev-1.13.0",
       "sdk_package": "httpx",
       "sdk_version": "0.28.1"
+    },
+    {
+      "role": "baseline",
+      "provider": "openrouter",
+      "requested_model": "google/gemma-4-31b-it:free",
+      "served_model": null,
+      "sdk_package": "httpx",
+      "sdk_version": "0.28.1"
     }
   ],
   "config": {
@@ -392,7 +400,63 @@
     }
   ],
   "baseline": {
-    "model": "claude-haiku-4-5",
-    "runs": []
+    "model": "google/gemma-4-31b-it:free",
+    "runs": [
+      {
+        "run_id": "baseline-baseline-1-0-9592b1d3",
+        "backend": "baseline",
+        "role": "baseline",
+        "seed": 1,
+        "episode": 0,
+        "score": 0.0,
+        "steps": 10,
+        "frames": 40,
+        "lives_lost": 0,
+        "terminated": false,
+        "truncated": true,
+        "truncation_reason": "max_steps",
+        "model_calls": 30,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "latency_ms_p50": 1078.203520621173,
+        "latency_ms_p95": 1314.4353541661983,
+        "latency_ms_total": 10653.230666415766,
+        "errors_by_status": {
+          "429": 30
+        },
+        "retries": 20,
+        "fallback_actions": 10,
+        "mean_confidence": 0.0,
+        "ordinary_accuracy": 0.0,
+        "deadline_adjusted_accuracy": 0.0,
+        "timeout_count": 0,
+        "invalid_output_count": 0,
+        "beyond_sweep_count": 10,
+        "cost_usd": 0.0,
+        "pricing_basis": {
+          "date": "2026-09-29",
+          "unit": "USD per million tokens",
+          "input": 0.0,
+          "output": 0.0,
+          "source": "openrouter free tier $0 (gemma-4-31b-it:free)"
+        },
+        "brier_score": 0.0,
+        "calibration_bins": [
+          {
+            "lower": 0.0,
+            "count": 10,
+            "confidence": 0.0,
+            "accuracy": 0.0
+          }
+        ],
+        "ece": 0.0,
+        "mixed_safety_snapshots": 0,
+        "mixed_correctness_snapshots": 10,
+        "safe_action_labels": 60,
+        "unsafe_action_labels": 0,
+        "trace": "artifacts/baseline-baseline-1-0-9592b1d3.jsonl",
+        "served_models": []
+      }
+    ]
   }
 }
