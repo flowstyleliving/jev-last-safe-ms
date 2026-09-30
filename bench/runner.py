@@ -155,7 +155,7 @@ def analyze(args):
         if not runs: continue
         n=sum(r['steps'] for r in runs)
         weighted=lambda key: sum(r[key]*r['steps'] for r in runs)/n
-        print(f"{role} ({','.join(sorted({r['backend'] for r in runs}))} | {len(runs)} episodes, {n} decisions")
+        print(f"{role} ({','.join(sorted({r['backend'] for r in runs}))}) | {len(runs)} episodes, {n} decisions")
         print(f"  ordinary={weighted('ordinary_accuracy'):.4f} deadline-adjusted={weighted('deadline_adjusted_accuracy'):.4f}")
         print(f"  mean latency={sum(r['latency_ms_total'] for r in runs)/n:.3f}ms; mean episode p50={np.mean([r['latency_ms_p50'] for r in runs]):.3f}ms p95={np.mean([r['latency_ms_p95'] for r in runs]):.3f}ms")
         print(f"  cost=${sum(r['cost_usd'] for r in runs):.6f}; confidence={weighted('mean_confidence'):.4f}; Brier={weighted('brier_score'):.4f}; mean episode ECE={weighted('ece'):.4f}")
