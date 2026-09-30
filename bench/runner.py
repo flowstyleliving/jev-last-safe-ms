@@ -44,7 +44,11 @@ def persist(data, path, no_git):
 def pricing(model):
     basis = dict(date=str(date.today()),unit='USD per million tokens')
     if model == 'mock': return dict(**basis,input=0,output=0,source='local mock, no billable tokens')
-    if model == 'baseline': return dict(**basis,input=1,output=5,source='https://www.anthropic.com/news/claude-haiku-4-5')
+    if model == 'baseline':
+        return dict(**basis,
+                    input=float(os.environ.get('BASELINE_INPUT_USD_PER_MILLION', '1')),
+                    output=float(os.environ.get('BASELINE_OUTPUT_USD_PER_MILLION', '5')),
+                    source=os.environ.get('BASELINE_PRICING_SOURCE', 'https://www.anthropic.com/news/claude-haiku-4-5'))
     if 'JEV_INPUT_USD_PER_MILLION' not in os.environ:
         raise ValueError('Set JEV_INPUT_USD_PER_MILLION from your dated billing agreement; no guessed price.')
     return dict(**basis,input=float(os.environ['JEV_INPUT_USD_PER_MILLION']),output=0,
@@ -140,8 +144,8 @@ def run(args):
             role = result['role']
             target = data['runs'] if role=='decider' else data['baseline']['runs']
             target.append(result)
-            requested = {'mock':'mock-random-v1','jev':'jev-latest','baseline':'claude-haiku-4-5'}[args.model]
-            metadata = dict(role=role,provider={'mock':'mock','jev':'typesafe','baseline':'anthropic'}[args.model],
+            requested = {'mock':'mock-random-v1','jev':'jev-latest','baseline':os.environ.get('BASELINE_MODEL','anthropic/claude-haiku-4.5')}[args.model]
+            metadata = dict(role=role,provider={'mock':'mock','jev':'typesafe','baseline':'openrouter'}[args.model],
                 requested_model=requested,served_model=result['served_models'][-1] if result['served_models'] else None,
                 sdk_package='httpx' if args.model!='mock' else 'bench',sdk_version=httpx.__version__ if args.model!='mock' else '0.1.0')
             if metadata not in data['models']: data['models'].append(metadata)
