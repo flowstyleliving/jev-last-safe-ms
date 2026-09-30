@@ -31,7 +31,8 @@ class Decision:
     probabilities: dict | None = None
 
 class Client:
-    def __init__(self, model, seed=1, timeout=10, retries=2, transport=None):
+    def __init__(self, model, seed=1, timeout=10, retries=2, transport=None, horizon=180):
+        self.question = QUESTION.replace('48-frame',f'{horizon}-frame')
         self.model, self.rng, self.timeout, self.max_retries = model, random.Random(seed), timeout, retries
         self.http = httpx.Client(timeout=timeout, transport=transport)
         self.requested = {'mock':'mock-random-v1','jev':'jev-latest','baseline':'claude-haiku-4-5'}[model]
@@ -58,12 +59,12 @@ class Client:
                     if self.model == 'jev':
                         response = self.http.post('https://api.typesafe.ai/v1/systemone',
                             headers={'Authorization':f'Bearer {self.key}'},
-                            json=dict(model=self.requested,state=state_json,questions={'move':dict(type='choice',instructions=QUESTION,criteria={a:a for a in ACTIONS})}))
+                            json=dict(model=self.requested,state=state_json,questions={'move':dict(type='choice',instructions=self.question,criteria={a:a for a in ACTIONS})}))
                     else:
                         response = self.http.post('https://api.anthropic.com/v1/messages',
                             headers={'x-api-key':self.key,'anthropic-version':'2023-06-01'},
                             json=dict(model=self.requested,max_tokens=128,
-                                      messages=[dict(role='user',content=QUESTION+'\n'+state_json)],
+                                      messages=[dict(role='user',content=self.question+'\n'+state_json)],
                                       output_config={'format':dict(type='json_schema',schema=SCHEMA)}))
                     response.raise_for_status()
                     body = response.json()

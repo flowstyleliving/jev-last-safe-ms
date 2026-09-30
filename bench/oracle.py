@@ -4,7 +4,7 @@ from .environment import ACTIONS
 def alien_count(ale):
     return sum(int(v).bit_count() for v in ale.getRAM()[18:24])
 
-def sweep(env, system, horizon=48, max_delay=12):
+def sweep(env, system, horizon=180, max_delay=12):
     ale = env.ale
     labels = {}
     try:

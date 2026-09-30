@@ -3,7 +3,7 @@ name = "last-safe-millisecond"
 version = "0.1.0"
 requires-python = ">=3.11,<3.12"
 description = "Seeded ALE Space Invaders deadline-adjusted decision benchmark"
-dependencies = ["gymnasium==1.3.0", "ale-py==0.12.1", "httpx==0.28.1", "numpy==2.4.6"]
+dependencies = ["gymnasium==1.3.0", "ale-py==0.12.1", "httpx==0.28.1", "numpy==2.4.6", "jsonschema==4.26.0"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

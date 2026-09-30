@@ -82,3 +82,20 @@ def test_decoder():
     assert s['bullets'][0]['y']==143 and s['bullets'][0]['vy'] is None
     r[81]+=4
     assert decode(r,3,20,s)['bullets'][0]['vy']==2
+
+
+def test_natural_snapshot_has_action_dependent_life_loss():
+    import base64
+    import ale_py
+    from pathlib import Path
+    row=json.loads((Path(__file__).parent/'fixtures/natural_threat.json').read_text())
+    env=make_env(1)
+    system=ale_py.ALEState(base64.b64decode(row['emulator_state_b64']))
+    labels=sweep(env,system,horizon=180,max_delay=12)
+    safe=[not x['outcomes'][0]['life_lost'] for x in labels.values()]
+    assert any(safe) and not all(safe)
+    assert any(x['correct'] for x in labels.values()) and not all(x['correct'] for x in labels.values())
+    assert any(x['deadline_frames']>=0 for x in labels.values())
+    assert 0 not in labels['RIGHT']['safe_delays']
+    assert 10 in labels['RIGHT']['safe_delays']
+    env.close()
