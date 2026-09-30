@@ -99,3 +99,13 @@ def test_natural_snapshot_has_action_dependent_life_loss():
     assert 0 not in labels['RIGHT']['safe_delays']
     assert 10 in labels['RIGHT']['safe_delays']
     env.close()
+
+
+def test_timeout_accounting(monkeypatch):
+    monkeypatch.setenv('TYPESAFE_API_KEY','test')
+    def timeout(request): raise httpx.ReadTimeout('simulated',request=request)
+    c=Client('jev',retries=0,transport=httpx.MockTransport(timeout))
+    d=c.decide('{}')
+    assert d['timeout'] and d['fallback'] and not d['invalid']
+    assert d['errors_by_status']=={'timeout':1} and d['attempts']==1
+    c.close()

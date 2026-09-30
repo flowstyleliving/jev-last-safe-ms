@@ -10,6 +10,8 @@ from collections import Counter
 from datetime import date
 import numpy as np
 import httpx
+import jsonschema
+from .validation import verify
 from .clients import Client
 from .environment import CONFIG, ACTIONS, make_env, snapshot, encode_system
 from .oracle import sweep, grade
@@ -27,6 +29,7 @@ def atomic_write(path, data):
     temp.replace(path)
 
 def persist(data, path, no_git):
+    jsonschema.validate(data,json.loads((ROOT/'results.schema.json').read_text()))
     atomic_write(path,data)
     if no_git: return
     subprocess.run(['git','add','--',str(path)],cwd=ROOT,check=True)
@@ -114,6 +117,7 @@ def episode(args,seed,number,role,price):
 
 def run(args):
     if not 0 <= args.max_delay < args.horizon: raise ValueError('Require 0 <= max-delay < horizon')
+    if args.workers < 1: raise ValueError('workers must be positive')
     if args.episodes_per_seed < 1 or args.max_steps < 0 or not args.seeds: raise ValueError('Invalid run length')
     price = pricing(args.model)
     roles = ['decider','baseline'] if args.model=='mock' and args.mock_role=='both' else [args.mock_role if args.model=='mock' else ('decider' if args.model=='jev' else 'baseline')]
@@ -167,6 +171,10 @@ def main():
     p.add_argument('--horizon',type=int,default=180); p.add_argument('--max-delay',type=int,default=12)
     p.add_argument('--workers',type=int,default=1); p.add_argument('--no-git',action='store_true'); p.add_argument('--output',default=str(ROOT/'results.json'))
     p=sub.add_parser('analyze'); p.add_argument('--output',default=str(ROOT/'results.json'))
-    args=parser.parse_args(); (run if args.command=='run' else analyze)(args)
+    p=sub.add_parser('verify'); p.add_argument('--output',default=str(ROOT/'results.json'))
+    p.add_argument('--min-seeds',type=int,default=2); p.add_argument('--evidence',default=str(ROOT/'validation-evidence.json'))
+    args=parser.parse_args()
+    if args.command=='verify': verify(args.output,args.min_seeds,args.evidence)
+    else: (run if args.command=='run' else analyze)(args)
 
 if __name__=='__main__': main()

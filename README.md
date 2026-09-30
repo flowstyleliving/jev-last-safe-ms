@@ -14,6 +14,7 @@ python -m pytest -q
 # Existing results are append-only: move results.json aside for a clean campaign.
 python -m bench run --model mock --seeds 1..2 --episodes-per-seed 1
 python -m bench analyze
+python -m bench verify --min-seeds 2
 # Five seeds in each of the decider and baseline slots (ten complete mock games):
 python -m bench run --model mock --seeds 1..5 --episodes-per-seed 1 --output results-mock-new.json
 ```
@@ -31,6 +32,8 @@ Validated on macOS arm64 with Python 3.11.15, Gymnasium 1.3.0 and ale-py 0.12.1.
 `ALE/SpaceInvaders-v5`, RAM observations, six minimal actions, four emulator frames per decision, sticky action probability 0.25, 108000-frame episode limit. No Gym wrappers are active (`unwrapped` environment). Each episode resets Gym/ALE and the mock RNG to the requested seed. A frameskip-four Gym step invokes the actual ALE transition four times. All oracle rollouts use the same ALE one-frame transition and minimal action mapping.
 
 At every decision, capture all 128 RAM bytes and **cloneSystemState**, including emulator RNG, not RAM alone. Each branch restores that same clone; a `finally` block restores the online environment after the oracle. Traces store the serialized clone as base64, so branches can be replayed with the same ALE version. RAM alone cannot reproduce the emulator's hidden state or sticky-action RNG.
+
+Validation found that 48 frames often sees the life-counter decrement only after an unavoidable collision. A natural 180-frame rollout produces action-dependent life-loss outcomes, so 180 frames (three game seconds) is the default; `--horizon` can change it with the shared model question updated accordingly. The initial four-game, 48-frame experiment is preserved in `results-initial-48-frame.json`.
 
 The finite-horizon policy is explicit: over a common **180-frame horizon**, issue NOOP for `d` frames, then hold the candidate action for the remaining frames. Exhaustively test every integer delay `d=0..12` for each action. This is a conditional, finite-horizon counterfactual oracle, not an optimal full-game policy or a guarantee against later deaths. Sticky action randomness is fixed by the snapshot, not averaged over new samples. The question describes the same held-action horizon to both models.
 
@@ -70,4 +73,4 @@ Retries cover 429, transient server errors, timeouts and network failures (two r
 
 Mock costs are exactly zero. Claude uses the published [Haiku 4.5 $1/$5 per million input/output tokens](https://www.anthropic.com/news/claude-haiku-4-5), with a recorded basis date. JEV input pricing must be supplied explicitly; output tokens are free per the official OpenAPI usage description. `analyze` prints decision-weighted accuracies, mean latency, **mean episode** latency percentiles (not pooled percentiles), total cost, binary confidence calibration and mixed-label counts. Confidence calibration is against oracle correctness of the selected action, not provider probability calibration against a unique class when optimal actions tie.
 
-Full traces are under `artifacts/*.jsonl` (excluded from Git because emulator snapshots are large). Preserve this directory with any submitted results. `validation-evidence.json` contains selected non-trivial snapshots and validation counts for a small reviewable artifact.
+Full traces are under `artifacts/*.jsonl` (excluded from Git because emulator snapshots are large). Preserve this directory with any submitted results. `python -m bench verify --min-seeds 5` validates the JSON schema in `results.schema.json`, checks every full trace length, requires action-dependent safe/unsafe labels in each slot, and exactly replays selected serialized snapshots. It writes `validation-evidence.json` with selected non-trivial snapshots and validation counts for a small reviewable artifact. The saved test fixture is a natural gameplay snapshot, not fabricated RAM.
