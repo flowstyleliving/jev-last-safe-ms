@@ -20,8 +20,12 @@ def verify(path, min_seeds=2, evidence_path=None):
         finite=0
         for run in runs:
             count=0
+            ordinary=0
+            adjusted=0
             for line in (ROOT/run['trace']).open():
                 row=json.loads(line); count+=1
+                ordinary+=row['ordinary_correct']
+                adjusted+=row['deadline_correct']
                 assert len(row['state']['ram'])==128
                 assert all(isinstance(v,int) and 0<=v<=255 for v in row['state']['ram'])
                 labels=row['oracle']
@@ -35,6 +39,8 @@ def verify(path, min_seeds=2, evidence_path=None):
                 if bounded and not any(x.get('example_type')=='finite_deadline' for x in examples):
                     examples.append(dict(role=role,seed=run['seed'],example_type='finite_deadline',**row))
             assert count==run['steps'], f'trace length mismatch: {run["run_id"]}'
+            assert abs(ordinary/count-run['ordinary_accuracy'])<1e-12
+            assert abs(adjusted/count-run['deadline_adjusted_accuracy'])<1e-12
         assert mixed>0, f'{role}: no action-dependent safety labels'
         summary[role]=dict(episodes=len(runs),seeds=sorted({r['seed'] for r in runs}),
                            mixed_safety_snapshots=mixed,finite_deadline_snapshots=finite,
@@ -46,6 +52,7 @@ def verify(path, min_seeds=2, evidence_path=None):
             system=ale_py.ALEState(base64.b64decode(row['emulator_state_b64']))
             replay=sweep(env,system,data['config']['oracle_horizon_frames'],data['config']['oracle_max_delay_frames'])
             assert replay==row['oracle'], 'serialized counterfactual replay mismatch'
+            assert env.ale.getRAM().tolist()==row['state']['ram'], 'snapshot RAM mismatch'
         finally: env.close()
     evidence=dict(schema_version=2,source_results=str(path),validation='schema, full trace counts, natural mixed labels, serialized ALE replay',summary=summary,examples=examples)
     if evidence_path: Path(evidence_path).write_text(json.dumps(evidence,indent=2)+'\n')

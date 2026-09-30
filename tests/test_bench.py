@@ -109,3 +109,20 @@ def test_timeout_accounting(monkeypatch):
     assert d['timeout'] and d['fallback'] and not d['invalid']
     assert d['errors_by_status']=={'timeout':1} and d['attempts']==1
     c.close()
+
+
+def test_runner_never_sends_oracle_to_client(monkeypatch,tmp_path):
+    from argparse import Namespace
+    from bench import runner
+    original=runner.Client
+    class SpyClient(original):
+        def decide(self,state_json):
+            state=json.loads(state_json)
+            assert len(state['ram'])==128
+            assert not {'oracle','deadline_frames','correct','outcomes','emulator_state_b64'} & state.keys()
+            return super().decide(state_json)
+    monkeypatch.setattr(runner,'Client',SpyClient)
+    monkeypatch.setattr(runner,'ROOT',tmp_path)
+    args=Namespace(model='mock',max_steps=1,horizon=2,max_delay=0)
+    result=runner.episode(args,3,0,'decider',runner.pricing('mock'))
+    assert result['steps']==1 and result['truncated'] and result['cost_usd']==0
