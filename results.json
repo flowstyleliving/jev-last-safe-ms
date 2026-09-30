@@ -243,6 +243,79 @@
       "served_models": [
         "jev-1.13.0"
       ]
+    },
+    {
+      "run_id": "jev-decider-4-0-9d0629a9",
+      "backend": "jev",
+      "role": "decider",
+      "seed": 4,
+      "episode": 0,
+      "score": 105.0,
+      "steps": 300,
+      "frames": 1200,
+      "lives_lost": 1,
+      "terminated": false,
+      "truncated": true,
+      "truncation_reason": "max_steps",
+      "model_calls": 300,
+      "input_tokens": 361151,
+      "output_tokens": 20466,
+      "latency_ms_p50": 128.1474995194003,
+      "latency_ms_p95": 226.70096621150157,
+      "latency_ms_total": 42523.447709623724,
+      "errors_by_status": {},
+      "retries": 0,
+      "fallback_actions": 0,
+      "mean_confidence": 0.2071666666666667,
+      "ordinary_accuracy": 0.5633333333333334,
+      "deadline_adjusted_accuracy": 0.41,
+      "timeout_count": 0,
+      "invalid_output_count": 0,
+      "beyond_sweep_count": 31,
+      "cost_usd": 0.015168342000000001,
+      "pricing_basis": {
+        "date": "2026-09-29",
+        "unit": "USD per million tokens",
+        "input": 0.042,
+        "output": 0,
+        "source": "TypeSafe docs: jev-1.13.0 $42/Btok = $0.042/Mtok input, output free"
+      },
+      "brier_score": 0.388083,
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "count": 1,
+          "confidence": 0.08,
+          "accuracy": 0.0
+        },
+        {
+          "lower": 0.1,
+          "count": 133,
+          "confidence": 0.16413533834586466,
+          "accuracy": 0.6842105263157895
+        },
+        {
+          "lower": 0.2,
+          "count": 156,
+          "confidence": 0.23762820512820518,
+          "accuracy": 0.4807692307692308
+        },
+        {
+          "lower": 0.30000000000000004,
+          "count": 10,
+          "confidence": 0.31699999999999995,
+          "accuracy": 0.3
+        }
+      ],
+      "ece": 0.35783333333333334,
+      "mixed_safety_snapshots": 54,
+      "mixed_correctness_snapshots": 229,
+      "safe_action_labels": 1467,
+      "unsafe_action_labels": 333,
+      "trace": "artifacts/jev-decider-4-0-9d0629a9.jsonl",
+      "served_models": [
+        "jev-1.13.0"
+      ]
     }
   ],
   "baseline": {
