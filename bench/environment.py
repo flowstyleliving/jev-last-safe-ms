@@ -10,9 +10,11 @@ CONFIG = dict(env_id='ALE/SpaceInvaders-v5', frameskip=4,
               state_encoding='RAM bytes decoded to ship x, alien grid, bullets, shields, lives as JSON',
               ale_py_version=ale_py.__version__, gymnasium_version=gym.__version__)
 
-def make_env(seed):
+def make_env(seed, render_mode=None):
     gym.register_envs(ale_py)
     kwargs = {k: CONFIG[k] for k in ('frameskip', 'repeat_action_probability', 'full_action_space', 'max_num_frames_per_episode', 'obs_type')}
+    if render_mode:
+        kwargs['render_mode'] = render_mode
     env = gym.make(CONFIG['env_id'], **kwargs).unwrapped
     env.reset(seed=seed)
     env.action_space.seed(seed)
